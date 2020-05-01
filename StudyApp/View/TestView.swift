@@ -17,3 +17,9 @@ class TestView: UIView {
     }
 
 }
+
+class languageLabel: UILabel {
+    override func awakeFromNib() {
+        layer.cornerRadius = 10
+    }
+}
