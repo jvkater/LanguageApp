@@ -31,9 +31,13 @@ import UIKit
         view.addSubview(MenuView)
         self.view.sendSubviewToBack(MenuView)
         backdropView.alpha = 0.2
-        
-       
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddWordController.handleTap(_:)))
+        backdropView.addGestureRecognizer(tapGesture)
+    }
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
         // Do any additional setup after loading the view.
 
-    }
+    
 }

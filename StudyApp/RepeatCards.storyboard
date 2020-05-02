@@ -29,9 +29,6 @@
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" red="0.16827056306965285" green="0.55706363916397095" blue="0.065417797776613301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Pkk-C4-5fi" kind="show" id="TOr-WB-YQT"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-va-IPo" customClass="noButton" customModule="StudyApp" customModuleProvider="target">
                                 <rect key="frame" x="79" y="553" width="78" height="39"/>
@@ -62,44 +59,5 @@
             </objects>
             <point key="canvasLocation" x="0.80000000000000004" y="85.907046476761622"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="3fX-4o-WgV">
-            <objects>
-                <viewController id="Pkk-C4-5fi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ASP-l4-I9s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mountain.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5kW-l7-OXo">
-                                <rect key="frame" x="0.0" y="-21" width="375" height="668"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3AP-8G-cRl" customClass="TestView" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="67" y="76" width="240" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wordy Flashcards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKD-FQ-v5l">
-                                        <rect key="frame" x="52" y="26" width="137" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="jog-dU-1A1"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="EJJ-7P-eFV"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ypq-Mn-3qU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="800.79999999999995" y="85.907046476761622"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="mountain.jpg" width="474" height="841"/>
-    </resources>
 </document>
