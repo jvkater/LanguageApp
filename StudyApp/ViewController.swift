@@ -9,8 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var username: UILabel!
+    
+    @IBOutlet weak var userprogress: UILabel!
+    
+    let currentuser = AppUser(name: "Alena")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        username.text = currentuser.name
+        userprogress.text = String(Int.random(in: 0...50))+"/50" // Generate random number for progress
         // Do any additional setup after loading the view.
     }
     @IBAction func unwindFromSelection(unwindsegue:UIStoryboardSegue) {
@@ -20,10 +29,11 @@ class ViewController: UIViewController {
     @IBAction func returnToRoot(unwindsegue:UIStoryboardSegue) {
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
+    
     func gotoAddWord(_ sender: UIButton) {
-        let vc = AddWordController()
-        vc.modalPresentationStyle = .custom
-        present(vc, animated: true, completion: nil)
+        let targetVC = AddWordController()
+        targetVC.modalPresentationStyle = .custom
+        present(targetVC, animated: true, completion: nil)
     }
 
 }
