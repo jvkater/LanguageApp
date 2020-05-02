@@ -13,12 +13,12 @@ import UIKit
     
     
     var backdropView: UIView = {
-        let bdView = UIView(frame: CGRect(x: 0,y: 0,width: 375,height: 350))
+        let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width,height: UIScreen.main.bounds.size.height/2))
               bdView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
               return bdView
           }()
     var MenuView: UIView = {
-    let mView = UIView(frame: CGRect(x: 00,y: 350,width: 375,height: 350))
+    let mView = UIView(frame: CGRect(x: 00,y: UIScreen.main.bounds.size.height/2,width: UIScreen.main.bounds.size.width,height: UIScreen.main.bounds.size.height/2))
         mView.backgroundColor = .white
         mView.layer.cornerRadius = 10
           return mView
