@@ -16,7 +16,7 @@ class FlashcardView: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     var initialState: UIView = {
-    let bdView = UIView(frame: CGRect(x: 0,y: 0,width: 240,height: 128))
+        let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.65,height: 128))
           bdView.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         bdView.layer.cornerRadius = 10
         var label = UILabel(frame: CGRect(x: 30, y:50, width: 180, height: 21))
@@ -49,12 +49,18 @@ class FlashcardView: UIViewController {
         
     }
  
-    
+    var IsInitialCardState = true
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        if IsInitialCardState{
         flippedState.isHidden=false
-        UIView.transition(from: initialState, to: flippedState, duration: 1, options: .transitionFlipFromRight, completion: nil)
-    }
+            UIView.transition(from: initialState, to: flippedState, duration: 0.4, options: .transitionFlipFromRight, completion: nil)
+            IsInitialCardState = false
+        } else {
+            UIView.transition(from: flippedState, to: initialState, duration: 0.4, options: .transitionFlipFromRight, completion: nil)
+            IsInitialCardState = true
+        }
         // Do any additional setup after loading the view.
 
+}
 }
 
