@@ -255,6 +255,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="lfN-nL-Zek"/>
                     </view>
+                    <connections>
+                        <outlet property="username" destination="4mc-5w-0gO" id="7X9-Ew-Ngk"/>
+                        <outlet property="userprogress" destination="spj-QC-Nrb" id="ln0-Cf-IPH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJH-KO-Edg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
