@@ -11,12 +11,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AddWordController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleAspectFill" id="0Lg-5e-Rhg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
+                    <view key="view" contentMode="bottom" id="0Lg-5e-Rhg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-Ia-SpR" customClass="MainMenuButton" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="41" y="102" width="292" height="45"/>
+                                <rect key="frame" x="41" y="434" width="292" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Scan from image">
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g78-eX-9Kj" customClass="MainMenuButton" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="41" y="165" width="292" height="45"/>
+                                <rect key="frame" x="41" y="497" width="292" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Get from audio">
@@ -35,7 +35,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heY-MH-mhj" customClass="MainMenuButton" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="41" y="36" width="292" height="45"/>
+                                <rect key="frame" x="41" y="368" width="292" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Draw manually">
@@ -43,14 +43,14 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhX-aN-ijo" customClass="MainMenuButton" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="41" y="242" width="292" height="41"/>
+                                <rect key="frame" x="41" y="574" width="292" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Go back">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dm0-iz-6Qu" kind="unwind" unwindAction="unwindFromSelectionWithUnwindsegue:" id="nLa-N4-jB0"/>
+                                    <segue destination="dm0-iz-6Qu" kind="unwind" unwindAction="unwindFromSelectionWithUnwindsegue:" id="w0g-qn-BHo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,12 +58,12 @@
                         <viewLayoutGuide key="safeArea" id="rZH-p4-qap"/>
                     </view>
                     <navigationItem key="navigationItem" id="216-OQ-5SU"/>
-                    <size key="freeformSize" width="375" height="307"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="dm0-iz-6Qu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-511" y="847"/>
+            <point key="canvasLocation" x="-527" y="1009"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4yQ-Vu-JIh">

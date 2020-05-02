@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     @IBAction func unwindFromSelection(unwindsegue:UIStoryboardSegue) {
         
     }
+    func gotoAddWord(_ sender: UIButton) {
+        let vc = AddWordController()
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true, completion: nil)
+    }
 
 }
-
