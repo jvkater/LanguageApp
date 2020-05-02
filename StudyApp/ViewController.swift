@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     @IBAction func unwindFromSelection(unwindsegue:UIStoryboardSegue) {
         
     }
+    
+    @IBAction func returnToRoot(unwindsegue:UIStoryboardSegue) {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
     func gotoAddWord(_ sender: UIButton) {
         let vc = AddWordController()
         vc.modalPresentationStyle = .custom

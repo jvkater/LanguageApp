@@ -14,7 +14,7 @@ import UIKit
     
     var backdropView: UIView = {
         let bdView = UIView(frame: CGRect(x: 0,y: 0,width: 375,height: 350))
-              bdView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+              bdView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
               return bdView
           }()
     var MenuView: UIView = {
