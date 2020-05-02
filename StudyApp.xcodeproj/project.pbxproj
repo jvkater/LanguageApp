@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5F0FDEFB245C008C00D2B3D7 /* BookPage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FDEFA245C008C00D2B3D7 /* BookPage.jpeg */; };
+		5F32E64C245DC3D20008B42A /* bgpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F7D0CF6243A836100364709 /* bgpic.jpg */; };
+		5F32E650245DD1E90008B42A /* ScanFromCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32E64F245DD1E90008B42A /* ScanFromCamera.swift */; };
 		5F5236B32440F9C900884B66 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5236B22440F9C900884B66 /* Buttons.swift */; };
 		5F7D0CBF243A7B6C00364709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7D0CBE243A7B6C00364709 /* AppDelegate.swift */; };
 		5F7D0CC1243A7B6C00364709 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7D0CC0243A7B6C00364709 /* SceneDelegate.swift */; };
@@ -22,6 +24,7 @@
 		5FA6227124422F4800124E6A /* RepeatCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA6227024422F4800124E6A /* RepeatCards.storyboard */; };
 		5FA622732442389800124E6A /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA622722442389800124E6A /* FlashcardView.swift */; };
 		5FA622752442393800124E6A /* WordsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA622742442393800124E6A /* WordsCollection.swift */; };
+		5FC38F11245C77DB00A03A21 /* AddWordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC38F10245C77DB00A03A21 /* AddWordController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		5F0FDEFA245C008C00D2B3D7 /* BookPage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BookPage.jpeg; sourceTree = "<group>"; };
+		5F32E64F245DD1E90008B42A /* ScanFromCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanFromCamera.swift; sourceTree = "<group>"; };
 		5F5236B22440F9C900884B66 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		5F7D0CBB243A7B6C00364709 /* StudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7D0CBE243A7B6C00364709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 		5FA6227024422F4800124E6A /* RepeatCards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepeatCards.storyboard; sourceTree = "<group>"; };
 		5FA622722442389800124E6A /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		5FA622742442393800124E6A /* WordsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsCollection.swift; sourceTree = "<group>"; };
+		5FC38F10245C77DB00A03A21 /* AddWordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +157,8 @@
 			children = (
 				5F7D0CC2243A7B6C00364709 /* ViewController.swift */,
 				5FA622722442389800124E6A /* FlashcardView.swift */,
+				5FC38F10245C77DB00A03A21 /* AddWordController.swift */,
+				5F32E64F245DD1E90008B42A /* ScanFromCamera.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +298,7 @@
 				5F0FDEFB245C008C00D2B3D7 /* BookPage.jpeg in Resources */,
 				5F7D0CFA243A87A700364709 /* mountain.jpg in Resources */,
 				5F7D0CC8243A7B6D00364709 /* Assets.xcassets in Resources */,
+				5F32E64C245DC3D20008B42A /* bgpic.jpg in Resources */,
 				5FA6227124422F4800124E6A /* RepeatCards.storyboard in Resources */,
 				5F7D0CC6243A7B6C00364709 /* Main.storyboard in Resources */,
 			);
@@ -320,6 +328,8 @@
 				5F7D0CF2243A800700364709 /* TestView.swift in Sources */,
 				5FA622732442389800124E6A /* FlashcardView.swift in Sources */,
 				5F7D0CC3243A7B6C00364709 /* ViewController.swift in Sources */,
+				5F32E650245DD1E90008B42A /* ScanFromCamera.swift in Sources */,
+				5FC38F11245C77DB00A03A21 /* AddWordController.swift in Sources */,
 				5F5236B32440F9C900884B66 /* Buttons.swift in Sources */,
 				5FA622752442393800124E6A /* WordsCollection.swift in Sources */,
 				5F7D0CBF243A7B6C00364709 /* AppDelegate.swift in Sources */,
