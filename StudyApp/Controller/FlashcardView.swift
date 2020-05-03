@@ -13,13 +13,18 @@ class FlashcardView: UIViewController {
     var Words = ["Gesundheit","Health"]
     // var image = "test".image()
 
+    @IBAction func CardSwipe(_ sender: UIPanGestureRecognizer) {
+        let cardView = sender.view!
+        let translationPoint = sender.translation(in: view)
+        cardView.center = CGPoint(x: view.center.x+translationPoint.x, y: view.center.y+translationPoint.y)
+    }
     @IBOutlet weak var containerView: UIView!
     
     var initialState: UIView = {
-        let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.65,height: 128))
+        let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.65,height: 250))
           bdView.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         bdView.layer.cornerRadius = 10
-        var label = UILabel(frame: CGRect(x: 30, y:50, width: 180, height: 21))
+        var label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
         label.textAlignment = NSTextAlignment.center
         label.text = "Gesundheit"
         label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -28,9 +33,9 @@ class FlashcardView: UIViewController {
       }()
     
     var flippedState: UIView = {
-    let fsView = UIView(frame: CGRect(x: 0,y: 0,width: 240,height: 128))
+    let fsView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.65,height: 250))
           fsView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        var label = UILabel(frame: CGRect(x: 30, y:50, width: 180, height: 21))
+        var label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
              label.textAlignment = NSTextAlignment.center
              label.text = "Health"
              label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
