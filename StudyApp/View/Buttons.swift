@@ -10,9 +10,11 @@ import UIKit
 
 class MainMenuButton: UIButton {
     override func awakeFromNib() {
+        layer.backgroundColor = #colorLiteral(red: 0.7529411765, green: 0.7529411765, blue: 0.7529411765, alpha: 1)
         layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        layer.borderWidth = 1
+        layer.borderWidth = 0.2
         layer.cornerRadius = 10
+        layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
 }
 

@@ -7,21 +7,7 @@
 //
 
 import Foundation
-import UIKit
+import CoreData
 
-struct WordsLibrary {
 
-    var sampleLib = [
-        "Wahrheit":"Random",
-        "Gesundheit":"Health",
-        "Hilfen":"To help",
-        "Fragen":"To question"
-    ]
-    func getRandomPair() -> Array<Any> {
-        let currentWord = sampleLib.keys.randomElement()
-        let currentTranslation = sampleLib[currentWord!]
-        
-        return [currentWord!,currentTranslation!]
-    }
-}
 
