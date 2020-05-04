@@ -46,3 +46,11 @@ class defaultWordButton:UIButton {
         layer.cornerRadius = 10
     }
 }
+
+class addToLibraryButton: UIButton {
+    override func awakeFromNib() {
+        layer.cornerRadius = 2
+        layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        layer.backgroundColor = #colorLiteral(red: 0.6184834242, green: 0.6165664792, blue: 0.6199893951, alpha: 1)
+    }
+}

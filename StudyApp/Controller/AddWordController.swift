@@ -29,6 +29,7 @@ import UIKit
         view.addSubview(MenuView)
         self.view.sendSubviewToBack(MenuView)
         backdropView.alpha = 0.2
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddWordController.handleTap(_:)))
         backdropView.addGestureRecognizer(tapGesture)
     }
@@ -36,6 +37,11 @@ import UIKit
         dismiss(animated: true, completion: nil)
     }
         // Do any additional setup after loading the view.
+    func gotoSound(_ sender: UIButton){
+        let tartgetVC = AddFromAudio()
+        tartgetVC.modalPresentationStyle = .custom
+        present(tartgetVC, animated: true, completion: nil)
+    }
 
     
 }
