@@ -44,6 +44,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="WordyLogo.png" width="93" height="94"/>
+        <image name="WordyLogo.png" width="60" height="60"/>
     </resources>
 </document>

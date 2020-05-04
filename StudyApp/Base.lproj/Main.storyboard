@@ -310,7 +310,7 @@
     </scenes>
     <resources>
         <image name="BookPage.jpeg" width="960" height="1280"/>
-        <image name="WordyLogo.png" width="93" height="94"/>
+        <image name="WordyLogo.png" width="60" height="60"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="plus.circle" catalog="system" width="64" height="60"/>
