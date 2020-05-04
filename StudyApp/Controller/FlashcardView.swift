@@ -26,6 +26,7 @@ class FlashcardView: UIViewController {
         bdView.layer.cornerRadius = 10
         var label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
         label.textAlignment = NSTextAlignment.center
+        label.center = bdView.center
         label.text = "Gesundheit"
         label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         bdView.addSubview(label)
@@ -36,6 +37,7 @@ class FlashcardView: UIViewController {
     let fsView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.65,height: 250))
           fsView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         var label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
+            label.center = fsView.center
              label.textAlignment = NSTextAlignment.center
              label.text = "Health"
              label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
