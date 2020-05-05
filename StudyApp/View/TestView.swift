@@ -34,3 +34,13 @@ class AudioPopView: UIView{
         self.alpha = 0.95
     }
 }
+
+class VideoPopView: UIView{
+    override func awakeFromNib() {
+        layer.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        layer.borderWidth = 1
+        layer.cornerRadius = 10
+        self.alpha = 0.95
+    }
+}
