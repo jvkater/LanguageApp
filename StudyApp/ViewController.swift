@@ -16,11 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var GreenView: UIView!
     @IBOutlet weak var bgpic: UIImageView!
     @IBOutlet weak var AppName: UILabel!
+    @IBOutlet weak var LearnedTodayLabel: UILabel!
     
     let currentuser = AppUser(name: "Alena")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         GreenView.frame.size.height = UIScreen.main.bounds.size.height/3
         GreenView.frame.size.width = UIScreen.main.bounds.size.width
         bgpic.frame.size.width = GreenView.frame.size.width
@@ -28,13 +31,19 @@ class ViewController: UIViewController {
         userGreeting.center.x = GreenView.center.x
         
         AppName.center.x = GreenView.center.x
-        AppName.center.y = username.center.y - 70
+       AppName.center.y = 82
         
         username.center.x = GreenView.center.x
         username.center.y = GreenView.center.y + 20
         userGreeting.center.y = username.center.y - username.font.pointSize
         username.text = currentuser.name
-        userprogress.text = String(Int.random(in: 0...50))+"/50" // Generate random number for progress
+        userprogress.text = String(Int.random(in: 0...50))+"/50" // Generate random number for progress\
+        // (view.safeAreaLayoutGuide.layoutFrame.width) - ширина экрана
+
+        userprogress.center.x = 50
+        userprogress.center.y = UIScreen.main.bounds.size.height/3 - 20
+        LearnedTodayLabel.center.x = 76
+        LearnedTodayLabel.center.y = userprogress.center.y - 25
         // Do any additional setup after loading the view.
     }
     @IBAction func unwindFromSelection(unwindsegue:UIStoryboardSegue) {

@@ -10,6 +10,12 @@ import UIKit
 
  class AddWordController: UIViewController {
  
+    @IBOutlet weak var ManualButton: MainMenuButton!
+    @IBOutlet weak var GetFromImageButton: MainMenuButton!
+    
+    @IBOutlet weak var GetFromAudioButton: MainMenuButton!
+    @IBOutlet weak var GoBackButton: MainMenuButton!
+    
     var backdropView: UIView = {
         let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width,height: UIScreen.main.bounds.size.height/2))
               bdView.backgroundColor = UIColor.black.withAlphaComponent(0.1)

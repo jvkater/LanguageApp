@@ -13,9 +13,7 @@ class TestView: UIView {
         layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         layer.borderWidth = 1
         layer.cornerRadius = 10
-  
     }
-
 }
 
 class languageLabel: UILabel {
