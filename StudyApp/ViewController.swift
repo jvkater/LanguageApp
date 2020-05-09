@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var GreenView: UIView!
     @IBOutlet weak var bgpic: UIImageView!
     @IBOutlet weak var AppName: UILabel!
+    @IBOutlet weak var AppLogo: UIImageView!
+    
     @IBOutlet weak var LearnedTodayLabel: UILabel!
     
     let currentuser = AppUser(name: "Alena")
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+// Device params: width  = 414, height = 896
         GreenView.frame.size.height = UIScreen.main.bounds.size.height/3
         GreenView.frame.size.width = UIScreen.main.bounds.size.width
         bgpic.frame.size.width = GreenView.frame.size.width
@@ -31,7 +33,9 @@ class ViewController: UIViewController {
         userGreeting.center.x = GreenView.center.x
         
         AppName.center.x = GreenView.center.x
-       AppName.center.y = 82
+        AppName.center.y = UIScreen.main.bounds.size.height*0.08
+        AppLogo.center.y = UIScreen.main.bounds.size.height*0.08
+        AppLogo.center.x = UIScreen.main.bounds.size.width*0.11
         
         username.center.x = GreenView.center.x
         username.center.y = GreenView.center.y + 20
@@ -40,9 +44,9 @@ class ViewController: UIViewController {
         userprogress.text = String(Int.random(in: 0...50))+"/50" // Generate random number for progress\
         // (view.safeAreaLayoutGuide.layoutFrame.width) - ширина экрана
 
-        userprogress.center.x = 50
+        userprogress.center.x = UIScreen.main.bounds.size.width*0.095
         userprogress.center.y = UIScreen.main.bounds.size.height/3 - 20
-        LearnedTodayLabel.center.x = 76
+        LearnedTodayLabel.center.x = UIScreen.main.bounds.size.width*0.160
         LearnedTodayLabel.center.y = userprogress.center.y - 25
         // Do any additional setup after loading the view.
     }

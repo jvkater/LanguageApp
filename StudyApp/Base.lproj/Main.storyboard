@@ -206,11 +206,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyF-SZ-nxb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                                <rect key="frame" x="0.0" y="0.0" width="413" height="273"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" image="unnamed.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wJd-JC-lZx">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="413" height="273"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mc-5w-0gO">
@@ -339,6 +339,7 @@
                         <viewLayoutGuide key="safeArea" id="lfN-nL-Zek"/>
                     </view>
                     <connections>
+                        <outlet property="AppLogo" destination="cUU-Qc-LF4" id="fmY-zX-aX8"/>
                         <outlet property="AppName" destination="16m-vo-1eh" id="ZPz-vI-CYL"/>
                         <outlet property="GreenView" destination="oyF-SZ-nxb" id="zgE-W3-haK"/>
                         <outlet property="LearnedTodayLabel" destination="1ac-Yq-Bvd" id="rMR-Fw-eyg"/>
@@ -350,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJH-KO-Edg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-551.20000000000005" y="124.58770614692655"/>
+            <point key="canvasLocation" x="-552.17391304347825" y="124.55357142857142"/>
         </scene>
     </scenes>
     <resources>
