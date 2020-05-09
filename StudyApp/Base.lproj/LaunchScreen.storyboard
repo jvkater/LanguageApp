@@ -15,26 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBU-Cp-I3X">
-                                <rect key="frame" x="0.0" y="0.0" width="423" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBU-Cp-I3X">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WordyLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8fi-Hl-rUr">
-                                        <rect key="frame" x="151" y="127" width="120" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WordyLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8fi-Hl-rUr">
+                                        <rect key="frame" x="151" y="160" width="111" height="120"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wordy Flashcards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1m-KI-YGb">
-                                        <rect key="frame" x="131" y="269" width="160" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wordy Flashcards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1m-KI-YGb">
+                                        <rect key="frame" x="127" y="301" width="160" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.57500153779983521" green="0.6781764030456543" blue="0.39994674921035767" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8fi-Hl-rUr" secondAttribute="trailing" constant="152" id="SSL-W5-sFM"/>
+                                    <constraint firstItem="8fi-Hl-rUr" firstAttribute="top" secondItem="QBU-Cp-I3X" secondAttribute="top" constant="160" id="afa-SV-NUR"/>
+                                    <constraint firstItem="c1m-KI-YGb" firstAttribute="centerX" secondItem="8fi-Hl-rUr" secondAttribute="centerX" id="cb9-sK-O65"/>
+                                    <constraint firstItem="c1m-KI-YGb" firstAttribute="top" secondItem="8fi-Hl-rUr" secondAttribute="bottom" constant="25" id="cjJ-Ib-MJ5"/>
+                                    <constraint firstItem="8fi-Hl-rUr" firstAttribute="leading" secondItem="QBU-Cp-I3X" secondAttribute="leading" constant="151" id="nIm-fb-BtN"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QBU-Cp-I3X" firstAttribute="leading" secondItem="zZB-We-leO" secondAttribute="leading" id="MP8-4W-iI8"/>
+                            <constraint firstAttribute="trailing" secondItem="QBU-Cp-I3X" secondAttribute="trailing" id="fhS-Q3-Fzq"/>
+                            <constraint firstAttribute="bottom" secondItem="QBU-Cp-I3X" secondAttribute="bottom" id="oFL-tS-bpM"/>
+                            <constraint firstItem="QBU-Cp-I3X" firstAttribute="top" secondItem="kYX-bv-Y51" secondAttribute="top" id="x2U-yT-hFt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zZB-We-leO"/>
                     </view>
                 </viewController>
