@@ -20,12 +20,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var LearnedTodayLabel: UILabel!
     
+    @IBOutlet weak var QuestionLabel: UILabel!
+    
+    @IBOutlet weak var MemorizeButton: MainMenuButton!
+    
+    @IBOutlet weak var MemButtonView: UIView!
+    @IBOutlet weak var AddNewButton: MainMenuButton!
+    
+    @IBOutlet weak var AddNewView: UIView!
+    
     let currentuser = AppUser(name: "Alena")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-// Device params: width  = 414, height = 896
+        // Device params: width  = 414, height = 896
         GreenView.frame.size.height = UIScreen.main.bounds.size.height/3
         GreenView.frame.size.width = UIScreen.main.bounds.size.width
         bgpic.frame.size.width = GreenView.frame.size.width
@@ -48,6 +57,13 @@ class ViewController: UIViewController {
         userprogress.center.y = UIScreen.main.bounds.size.height/3 - 20
         LearnedTodayLabel.center.x = UIScreen.main.bounds.size.width*0.160
         LearnedTodayLabel.center.y = userprogress.center.y - 25
+        
+        QuestionLabel.center.x = GreenView.center.x //I know it's a bad practice. FIX LATER!
+        QuestionLabel.center.y = UIScreen.main.bounds.size.height/36*15
+        MemButtonView.center.x = GreenView.center.x
+        MemButtonView.center.y = UIScreen.main.bounds.size.height/9*5
+        AddNewView.center.x = GreenView.center.x
+        AddNewView.center.y = UIScreen.main.bounds.size.height/9*7
         // Do any additional setup after loading the view.
     }
     @IBAction func unwindFromSelection(unwindsegue:UIStoryboardSegue) {
