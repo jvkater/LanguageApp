@@ -33,6 +33,18 @@ import UIKit
         view.backgroundColor = .clear
         view.addSubview(backdropView)
         view.addSubview(MenuView)
+       
+        ManualButton.center.x = UIScreen.main.bounds.width/2
+        GetFromImageButton.center.x = UIScreen.main.bounds.width/2
+        GetFromAudioButton.center.x = UIScreen.main.bounds.width/2
+        GoBackButton.center.x = UIScreen.main.bounds.width/2
+        
+        ManualButton.center.y = UIScreen.main.bounds.height/32*18
+        GetFromImageButton.center.y = UIScreen.main.bounds.height/32*21
+        GetFromAudioButton.center.y = UIScreen.main.bounds.height/32*24
+        GoBackButton.center.y = UIScreen.main.bounds.height/32*27
+        
+        
         self.view.sendSubviewToBack(MenuView)
         backdropView.alpha = 0.2
         

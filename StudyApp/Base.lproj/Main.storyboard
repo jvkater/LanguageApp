@@ -358,7 +358,7 @@
                         <viewLayoutGuide key="safeArea" id="lfN-nL-Zek"/>
                     </view>
                     <connections>
-                        <outlet property="AddNewButton" destination="pNb-j1-vFp" id="3N0-aK-BwK"/>
+                        <outlet property="AddNewButton" destination="pNb-j1-vFp" id="mbX-mK-TPe"/>
                         <outlet property="AddNewView" destination="XPo-Wr-7cP" id="lnf-M1-MAX"/>
                         <outlet property="AppLogo" destination="cUU-Qc-LF4" id="fmY-zX-aX8"/>
                         <outlet property="AppName" destination="16m-vo-1eh" id="ZPz-vI-CYL"/>
