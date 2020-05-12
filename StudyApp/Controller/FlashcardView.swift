@@ -13,6 +13,10 @@ class FlashcardView: UIViewController {
     var Words = ["Gesundheit","Health"]
     // var image = "test".image()
 
+    @IBOutlet weak var headlineLabel: UIButton!
+    
+    @IBOutlet weak var BackButton: UIButton!
+    
     @IBAction func CardSwipe(_ sender: UIPanGestureRecognizer) {
         let cardView = sender.view!
         let translationPoint = sender.translation(in: view)
@@ -21,9 +25,11 @@ class FlashcardView: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     var initialState: UIView = {
-        let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.65,height: 250))
-          bdView.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-        bdView.layer.cornerRadius = 10
+        let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.7,height: UIScreen.main.bounds.size.height/2))
+          bdView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        bdView.layer.cornerRadius = 15
+        bdView.layer.borderWidth = 2
+        bdView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         var label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
         label.textAlignment = NSTextAlignment.center
         label.center = bdView.center
@@ -34,21 +40,30 @@ class FlashcardView: UIViewController {
       }()
     
     var flippedState: UIView = {
-    let fsView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.65,height: 250))
-          fsView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        let fsView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.7,height: UIScreen.main.bounds.size.height/2))
+          fsView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        fsView.layer.borderWidth = 2
+        fsView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         var label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
             label.center = fsView.center
              label.textAlignment = NSTextAlignment.center
              label.text = "Health"
              label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
              fsView.addSubview(label)
-        fsView.layer.cornerRadius = 10
+        fsView.layer.cornerRadius = 15
           return fsView
       }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FlashcardView.handleTap(_:)))
+        headlineLabel.center.x = UIScreen.main.bounds.width/2
+        headlineLabel.center.y = UIScreen.main.bounds.size.height*0.07
+        BackButton.center.y = UIScreen.main.bounds.size.height*0.07
+        containerView.frame.size.width = UIScreen.main.bounds.width*0.7
+        containerView.frame.size.height = UIScreen.main.bounds.height/2
+        containerView.center = super.view.center
         containerView.addGestureRecognizer(tapGesture)
         containerView.addSubview(initialState)
         containerView.addSubview(flippedState)
