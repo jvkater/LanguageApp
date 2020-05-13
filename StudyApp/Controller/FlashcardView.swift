@@ -17,6 +17,10 @@ class FlashcardView: UIViewController {
     
     @IBOutlet weak var BackButton: UIButton!
     
+    @IBOutlet weak var yesButton: yesButton!
+    @IBOutlet weak var noButton: noButton!
+    
+    
     @IBAction func CardSwipe(_ sender: UIPanGestureRecognizer) {
         let cardView = sender.view!
         let translationPoint = sender.translation(in: view)
@@ -64,6 +68,8 @@ class FlashcardView: UIViewController {
         containerView.frame.size.width = UIScreen.main.bounds.width*0.7
         containerView.frame.size.height = UIScreen.main.bounds.height/2
         containerView.center = super.view.center
+        yesButton.center.y = UIScreen.main.bounds.height*0.9
+        noButton.center.y = UIScreen.main.bounds.height*0.9
         containerView.addGestureRecognizer(tapGesture)
         containerView.addSubview(initialState)
         containerView.addSubview(flippedState)

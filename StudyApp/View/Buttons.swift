@@ -30,13 +30,17 @@ class yesButton: UIButton{
     override func awakeFromNib() {
         layer.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         layer.cornerRadius = 10
+        layer.borderWidth = 2
+        layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 }
 
 class noButton:UIButton {
     override func awakeFromNib() {
-        layer.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        layer.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         layer.cornerRadius = 10
+        layer.borderWidth = 2
+        layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 }
 

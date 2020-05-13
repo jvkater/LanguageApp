@@ -15,23 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQu-zV-6px" customClass="yesButton" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="237" y="732" width="78" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Yes">
-                                    <color key="titleColor" red="0.16827056306965285" green="0.55706363916397095" blue="0.065417797776613301" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-va-IPo" customClass="noButton" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="99" y="732" width="78" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="No">
-                                    <color key="titleColor" red="0.55706363920000002" green="0.16393067459999999" blue="0.19997143689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Odi-jw-rFs">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odi-jw-rFs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKX-Bs-7k3">
                                         <rect key="frame" x="137" y="46" width="144" height="36"/>
@@ -52,21 +37,58 @@
                                         </connections>
                                     </button>
                                     <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRQ-RN-Vgy">
-                                        <rect key="frame" x="54" y="247" width="310" height="403"/>
+                                        <rect key="frame" x="64" y="247" width="290" height="403"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </containerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-va-IPo" customClass="noButton" customModule="StudyApp" customModuleProvider="target">
+                                        <rect key="frame" x="64" y="725" width="100" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="3Ez-4S-2nN"/>
+                                            <constraint firstAttribute="height" constant="45" id="TP9-7h-NIW"/>
+                                        </constraints>
+                                        <state key="normal" title="Incorrect">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQu-zV-6px" customClass="yesButton" customModule="StudyApp" customModuleProvider="target">
+                                        <rect key="frame" x="254" y="725" width="100" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="CJD-9W-JGD"/>
+                                            <constraint firstAttribute="width" constant="100" id="Va5-Bp-MM8"/>
+                                            <constraint firstAttribute="height" constant="45" id="p7b-1c-clh"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="vDj-nc-7ml"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Correct">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.57500153779999996" green="0.67817640300000004" blue="0.39994674920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="kQu-zV-6px" secondAttribute="bottom" constant="84" id="4ne-lw-pNp"/>
+                                    <constraint firstAttribute="trailing" secondItem="kQu-zV-6px" secondAttribute="trailing" constant="60" id="NnL-wh-4eu"/>
+                                    <constraint firstItem="6eh-va-IPo" firstAttribute="leading" secondItem="Odi-jw-rFs" secondAttribute="leading" constant="64" id="adJ-af-qn3"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="6eh-va-IPo" secondAttribute="bottom" constant="84" id="efT-c6-UFb"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Odi-jw-rFs" firstAttribute="trailing" secondItem="y70-Ic-Xp5" secondAttribute="trailing" id="8Vi-R2-Am3"/>
+                            <constraint firstAttribute="bottom" secondItem="Odi-jw-rFs" secondAttribute="bottom" id="9Zq-xN-dBC"/>
+                            <constraint firstItem="Odi-jw-rFs" firstAttribute="top" secondItem="NZY-di-Phf" secondAttribute="top" id="mSt-ma-b77"/>
+                            <constraint firstItem="Odi-jw-rFs" firstAttribute="leading" secondItem="y70-Ic-Xp5" secondAttribute="leading" id="mvn-gk-bdn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y70-Ic-Xp5"/>
                     </view>
                     <connections>
                         <outlet property="BackButton" destination="jmX-pe-q1b" id="LRx-Sm-IzW"/>
                         <outlet property="containerView" destination="bRQ-RN-Vgy" id="9Bu-dQ-5kV"/>
                         <outlet property="headlineLabel" destination="ZKX-Bs-7k3" id="zKY-RK-fer"/>
+                        <outlet property="noButton" destination="6eh-va-IPo" id="qlk-WH-0pg"/>
+                        <outlet property="yesButton" destination="kQu-zV-6px" id="2ge-r8-SEO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMb-gG-6j5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
