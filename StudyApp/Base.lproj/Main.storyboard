@@ -307,7 +307,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="lc2-rq-SjS" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Buh-JA-WgE"/>
+                                            <segue destination="lc2-rq-SjS" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Buh-JA-WgE"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memorize words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xww-e9-SX2">

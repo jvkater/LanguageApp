@@ -42,3 +42,23 @@ class VideoPopView: UIView{
         self.alpha = 0.95
     }
 }
+
+class topView:UIView {
+    override func awakeFromNib() {
+        layer.cornerRadius = 10
+    }
+}
+class popDown:UIView {
+    override func awakeFromNib() {
+        layer.cornerRadius = 20
+
+    }
+}
+
+class cardView: UIView {
+    override func awakeFromNib() {
+        layer.cornerRadius = 10
+        layer.borderColor = #colorLiteral(red: 0.4888150692, green: 0.6754166484, blue: 0.3641774058, alpha: 1)
+        layer.borderWidth = 2
+    }
+}

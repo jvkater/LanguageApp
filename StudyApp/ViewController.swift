@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     
     let currentuser = AppUser(name: "Alena")
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,6 +67,8 @@ class ViewController: UIViewController {
         AddNewView.center.y = UIScreen.main.bounds.size.height/9*7
         // Do any additional setup after loading the view.
     }
+    
+    
     @IBAction func unwindFromSelection(unwindsegue:UIStoryboardSegue) {
     }
     

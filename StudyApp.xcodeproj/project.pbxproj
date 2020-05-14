@@ -31,6 +31,8 @@
 		5FA6227124422F4800124E6A /* RepeatCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA6227024422F4800124E6A /* RepeatCards.storyboard */; };
 		5FA622732442389800124E6A /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA622722442389800124E6A /* FlashcardView.swift */; };
 		5FA622752442393800124E6A /* WordsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA622742442393800124E6A /* WordsCollection.swift */; };
+		5FBA0A8E246DD6D600E5A1F7 /* WordsLibrary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBA0A8C246DD6D600E5A1F7 /* WordsLibrary+CoreDataClass.swift */; };
+		5FBA0A8F246DD6D600E5A1F7 /* WordsLibrary+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBA0A8D246DD6D600E5A1F7 /* WordsLibrary+CoreDataProperties.swift */; };
 		5FC38F11245C77DB00A03A21 /* AddWordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC38F10245C77DB00A03A21 /* AddWordController.swift */; };
 		5FF5F34C245E0ADF0010B05E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF5F34B245E0ADF0010B05E /* UserData.swift */; };
 		5FF5F34F245E12E50010B05E /* WordsLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FF5F34D245E12E50010B05E /* WordsLib.xcdatamodeld */; };
@@ -84,6 +86,8 @@
 		5FA6227024422F4800124E6A /* RepeatCards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepeatCards.storyboard; sourceTree = "<group>"; };
 		5FA622722442389800124E6A /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		5FA622742442393800124E6A /* WordsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsCollection.swift; sourceTree = "<group>"; };
+		5FBA0A8C246DD6D600E5A1F7 /* WordsLibrary+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordsLibrary+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5FBA0A8D246DD6D600E5A1F7 /* WordsLibrary+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordsLibrary+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5FC38F10245C77DB00A03A21 /* AddWordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordController.swift; sourceTree = "<group>"; };
 		5FF5F34B245E0ADF0010B05E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		5FF5F34E245E12E50010B05E /* WordsLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordsLib.xcdatamodel; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		5F7D0CB2243A7B6C00364709 = {
 			isa = PBXGroup;
 			children = (
+				5FBA0A8C246DD6D600E5A1F7 /* WordsLibrary+CoreDataClass.swift */,
+				5FBA0A8D246DD6D600E5A1F7 /* WordsLibrary+CoreDataProperties.swift */,
 				5F7D0CBD243A7B6C00364709 /* StudyApp */,
 				5F7D0CD4243A7B6D00364709 /* StudyAppTests */,
 				5F7D0CDF243A7B6E00364709 /* StudyAppUITests */,
@@ -363,6 +369,8 @@
 				5F7D0CC3243A7B6C00364709 /* ViewController.swift in Sources */,
 				5F32E650245DD1E90008B42A /* ScanFromCamera.swift in Sources */,
 				5F07BC7824606152003A286A /* AddFromAudio.swift in Sources */,
+				5FBA0A8F246DD6D600E5A1F7 /* WordsLibrary+CoreDataProperties.swift in Sources */,
+				5FBA0A8E246DD6D600E5A1F7 /* WordsLibrary+CoreDataClass.swift in Sources */,
 				5FC38F11245C77DB00A03A21 /* AddWordController.swift in Sources */,
 				5F5236B32440F9C900884B66 /* Buttons.swift in Sources */,
 				5FF5F34F245E12E50010B05E /* WordsLib.xcdatamodeld in Sources */,

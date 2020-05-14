@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class FlashcardView: UIViewController {
     
@@ -31,15 +33,9 @@ class FlashcardView: UIViewController {
     var initialState: UIView = {
         let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.7,height: UIScreen.main.bounds.size.height/2))
           bdView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        bdView.layer.cornerRadius = 15
+        bdView.layer.cornerRadius = 10
         bdView.layer.borderWidth = 2
         bdView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        var label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
-        label.textAlignment = NSTextAlignment.center
-        label.center = bdView.center
-        label.text = "Gesundheit"
-        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        bdView.addSubview(label)
           return bdView
       }()
     
@@ -48,18 +44,71 @@ class FlashcardView: UIViewController {
           fsView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         fsView.layer.borderWidth = 2
         fsView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        var label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
-            label.center = fsView.center
-             label.textAlignment = NSTextAlignment.center
-             label.text = "Health"
-             label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-             fsView.addSubview(label)
-        fsView.layer.cornerRadius = 15
+        fsView.layer.cornerRadius = 10
           return fsView
       }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        func save(originalWord: String, translatedWord : String) {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+            }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "WordsLibrary", in: managedContext)!
+        let WordCard = NSManagedObject(entity: entity, insertInto: managedContext)
+            WordCard.setValue(originalWord, forKeyPath: "addedWord")
+            WordCard.setValue(translatedWord, forKeyPath: "addedWordTranslation")
+            do {
+                try managedContext.save()
+            } catch let _ as NSError {
+                print("Could not save")
+            }
+        }
+      
+        func fetchAll(){
+          guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+          }
+          let managedContext = appDelegate.persistentContainer.viewContext
+          let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WordsLibrary")
+          do {
+            let words = try managedContext.fetch(fetchRequest)
+            for i in words {
+                print(i.value(forKey: "addedWord"))
+            }
+          } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+          }
+        }
+        
+        func fetch(param:Int8) -> String {
+            var outp = NSManagedObject()
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            let managedContext = appDelegate?.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WordsLibrary")
+            do {
+                let wordsBase = try managedContext?.fetch(fetchRequest)
+                outp = (wordsBase?[0])!
+            } catch let error as NSError {
+              print("Could not fetch. \(error), \(error.userInfo)")
+            }
+            if param == 1 {
+            return outp.value(forKey: "addedWord") as! String
+            } else {
+                return outp.value(forKey: "addedWordTranslation") as! String
+            }
+        }
+        
+        // save(originalWord: "12", translatedWord: "32")
+        var WordLabel = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
+         WordLabel.textAlignment = NSTextAlignment.center
+         WordLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        var Word2Label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
+        Word2Label.textAlignment = NSTextAlignment.center
+        Word2Label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FlashcardView.handleTap(_:)))
         headlineLabel.center.x = UIScreen.main.bounds.width/2
@@ -72,8 +121,16 @@ class FlashcardView: UIViewController {
         noButton.center.y = UIScreen.main.bounds.height*0.9
         containerView.addGestureRecognizer(tapGesture)
         containerView.addSubview(initialState)
+        initialState.addSubview(Word2Label)
+        Word2Label.center = initialState.center
+        Word2Label.text = fetch(param: 1)
+        
         containerView.addSubview(flippedState)
+        flippedState.addSubview(WordLabel)
+        WordLabel.center = flippedState.center
+        WordLabel.text = fetch(param: 2)
         flippedState.isHidden=true
+        
         
     }
  
