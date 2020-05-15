@@ -51,57 +51,7 @@ class FlashcardView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        func save(originalWord: String, translatedWord : String) {
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-          return
-            }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "WordsLibrary", in: managedContext)!
-        let WordCard = NSManagedObject(entity: entity, insertInto: managedContext)
-            WordCard.setValue(originalWord, forKeyPath: "addedWord")
-            WordCard.setValue(translatedWord, forKeyPath: "addedWordTranslation")
-            do {
-                try managedContext.save()
-            } catch let _ as NSError {
-                print("Could not save")
-            }
-        }
-      
-        func fetchAll(){
-          guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-          }
-          let managedContext = appDelegate.persistentContainer.viewContext
-          let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WordsLibrary")
-          do {
-            let words = try managedContext.fetch(fetchRequest)
-            for i in words {
-                print(i.value(forKey: "addedWord"))
-            }
-          } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-          }
-        }
-        
-        func fetch(param:Int8) -> String {
-            var outp = NSManagedObject()
-            let appDelegate = UIApplication.shared.delegate as? AppDelegate
-            let managedContext = appDelegate?.persistentContainer.viewContext
-            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WordsLibrary")
-            do {
-                let wordsBase = try managedContext?.fetch(fetchRequest)
-                outp = (wordsBase?[0])!
-            } catch let error as NSError {
-              print("Could not fetch. \(error), \(error.userInfo)")
-            }
-            if param == 1 {
-            return outp.value(forKey: "addedWord") as! String
-            } else {
-                return outp.value(forKey: "addedWordTranslation") as! String
-            }
-        }
-        
-        // save(originalWord: "12", translatedWord: "32")
+       
         var WordLabel = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
          WordLabel.textAlignment = NSTextAlignment.center
          WordLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -123,12 +73,12 @@ class FlashcardView: UIViewController {
         containerView.addSubview(initialState)
         initialState.addSubview(Word2Label)
         Word2Label.center = initialState.center
-        Word2Label.text = fetch(param: 1)
+        Word2Label.text = "Frontside"
         
         containerView.addSubview(flippedState)
         flippedState.addSubview(WordLabel)
         WordLabel.center = flippedState.center
-        WordLabel.text = fetch(param: 2)
+        WordLabel.text = "Backside"
         flippedState.isHidden=true
         
         

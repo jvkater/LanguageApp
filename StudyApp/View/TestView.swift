@@ -51,7 +51,6 @@ class topView:UIView {
 class popDown:UIView {
     override func awakeFromNib() {
         layer.cornerRadius = 20
-
     }
 }
 
@@ -60,5 +59,12 @@ class cardView: UIView {
         layer.cornerRadius = 10
         layer.borderColor = #colorLiteral(red: 0.4888150692, green: 0.6754166484, blue: 0.3641774058, alpha: 1)
         layer.borderWidth = 2
+    }
+}
+
+class AddWordMainView: UIView {
+    override func awakeFromNib() {
+        layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        layer.cornerRadius = 10
     }
 }

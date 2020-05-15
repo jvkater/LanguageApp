@@ -11,6 +11,8 @@ import UIKit
  class AddWordController: UIViewController {
  
     @IBOutlet weak var ManualButton: MainMenuButton!
+    @IBAction func GoToManual(_ sender: Any) {
+    }
     @IBOutlet weak var GetFromImageButton: MainMenuButton!
     
     @IBOutlet weak var GetFromAudioButton: MainMenuButton!
