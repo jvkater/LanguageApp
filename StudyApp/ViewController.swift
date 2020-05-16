@@ -17,17 +17,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var bgpic: UIImageView!
     @IBOutlet weak var AppName: UILabel!
     @IBOutlet weak var AppLogo: UIImageView!
-    
     @IBOutlet weak var LearnedTodayLabel: UILabel!
-    
     @IBOutlet weak var QuestionLabel: UILabel!
-    
     @IBOutlet weak var MemorizeButton: MainMenuButton!
-    
     @IBOutlet weak var MemButtonView: UIView!
     @IBOutlet weak var AddNewButton: MainMenuButton!
-    
     @IBOutlet weak var AddNewView: UIView!
+    @IBOutlet weak var TabBar: UITabBar!
+    
+    
     
     let currentuser = AppUser(name: "Alena")
     
@@ -59,12 +57,14 @@ class ViewController: UIViewController {
         LearnedTodayLabel.center.x = UIScreen.main.bounds.size.width*0.160
         LearnedTodayLabel.center.y = userprogress.center.y - 25
         
-        QuestionLabel.center.x = GreenView.center.x //I know it's a bad practice. FIX LATER!
-        QuestionLabel.center.y = UIScreen.main.bounds.size.height/36*15
-        MemButtonView.center.x = GreenView.center.x
-        MemButtonView.center.y = UIScreen.main.bounds.size.height/9*5
-        AddNewView.center.x = GreenView.center.x
-        AddNewView.center.y = UIScreen.main.bounds.size.height/9*7
+       // QuestionLabel.center.x = GreenView.center.x //I know it's a bad practice. FIX LATER!
+        //QuestionLabel.center.y = UIScreen.main.bounds.size.height/36*15
+        //MemButtonView.center.x = GreenView.center.x
+        //MemButtonView.center.y = UIScreen.main.bounds.size.height/9*5
+        //AddNewView.center.x = GreenView.center.x
+        //AddNewView.center.y = UIScreen.main.bounds.size.height/9*7
+       
+        
         // Do any additional setup after loading the view.
     }
     

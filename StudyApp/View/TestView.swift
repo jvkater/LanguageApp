@@ -68,3 +68,10 @@ class AddWordMainView: UIView {
         layer.cornerRadius = 10
     }
 }
+
+class FoodCell: UITableViewCell {
+    @IBOutlet var name : UILabel?
+    @IBOutlet var plantDescription : UILabel?
+    @IBOutlet var picture : UIImageView?
+}
+
