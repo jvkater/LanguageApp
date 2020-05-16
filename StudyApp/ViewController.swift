@@ -25,14 +25,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var AddNewView: UIView!
     @IBOutlet weak var TabBar: UITabBar!
     
-    
+    var WordsDataBase = [NSManagedObject]()
     
     let currentuser = AppUser(name: "Alena")
     
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Device params: width  = 414, height = 896
         GreenView.frame.size.height = UIScreen.main.bounds.size.height/3
         GreenView.frame.size.width = UIScreen.main.bounds.size.width

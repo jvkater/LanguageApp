@@ -17,6 +17,8 @@
 		5F32E64C245DC3D20008B42A /* bgpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F7D0CF6243A836100364709 /* bgpic.jpg */; };
 		5F32E650245DD1E90008B42A /* ScanFromCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32E64F245DD1E90008B42A /* ScanFromCamera.swift */; };
 		5F5236B32440F9C900884B66 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5236B22440F9C900884B66 /* Buttons.swift */; };
+		5F564322246FDB9D0050205D /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F564321246FDB9D0050205D /* LibraryVC.swift */; };
+		5F56434824701A600050205D /* LibraryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F56434724701A600050205D /* LibraryCellTableViewCell.swift */; };
 		5F7183F8246E58C1002C84F4 /* ManualAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7183F7246E58C1002C84F4 /* ManualAdd.swift */; };
 		5F72E8D22461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F72E8D12461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg */; };
 		5F7D0CBF243A7B6C00364709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7D0CBE243A7B6C00364709 /* AppDelegate.swift */; };
@@ -66,6 +68,8 @@
 		5F21499F245F5CA700B36F43 /* WordyLogo_180x190.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WordyLogo_180x190.png; sourceTree = "<group>"; };
 		5F32E64F245DD1E90008B42A /* ScanFromCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanFromCamera.swift; sourceTree = "<group>"; };
 		5F5236B22440F9C900884B66 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		5F564321246FDB9D0050205D /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
+		5F56434724701A600050205D /* LibraryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCellTableViewCell.swift; sourceTree = "<group>"; };
 		5F7183F7246E58C1002C84F4 /* ManualAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAdd.swift; sourceTree = "<group>"; };
 		5F72E8D12461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg"; sourceTree = "<group>"; };
 		5F7D0CBB243A7B6C00364709 /* StudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +193,7 @@
 				5F32E64F245DD1E90008B42A /* ScanFromCamera.swift */,
 				5F07BC7724606152003A286A /* AddFromAudio.swift */,
 				5F7183F7246E58C1002C84F4 /* ManualAdd.swift */,
+				5F564321246FDB9D0050205D /* LibraryVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			children = (
 				5F7D0CF1243A800700364709 /* TestView.swift */,
 				5F5236B22440F9C900884B66 /* Buttons.swift */,
+				5F56434724701A600050205D /* LibraryCellTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,9 +378,11 @@
 				5F7D0CC3243A7B6C00364709 /* ViewController.swift in Sources */,
 				5F32E650245DD1E90008B42A /* ScanFromCamera.swift in Sources */,
 				5F07BC7824606152003A286A /* AddFromAudio.swift in Sources */,
+				5F56434824701A600050205D /* LibraryCellTableViewCell.swift in Sources */,
 				5FBA0A8F246DD6D600E5A1F7 /* WordsLibrary+CoreDataProperties.swift in Sources */,
 				5FBA0A8E246DD6D600E5A1F7 /* WordsLibrary+CoreDataClass.swift in Sources */,
 				5F7183F8246E58C1002C84F4 /* ManualAdd.swift in Sources */,
+				5F564322246FDB9D0050205D /* LibraryVC.swift in Sources */,
 				5FC38F11245C77DB00A03A21 /* AddWordController.swift in Sources */,
 				5F5236B32440F9C900884B66 /* Buttons.swift in Sources */,
 				5FF5F34F245E12E50010B05E /* WordsLib.xcdatamodeld in Sources */,

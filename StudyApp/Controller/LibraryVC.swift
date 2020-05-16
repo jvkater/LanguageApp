@@ -32,11 +32,28 @@ class LibraryVC: UIViewController {
         print("Could not fetch. \(error), \(error.userInfo)")
       }
     }
+    func deleteWord () {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WordsLibrary")
+              do {
+          let words = try managedContext.fetch(fetchRequest)
+          for i in words {
+            if i.value(forKey: "addedWord") as? String == "der Kater" {
+                managedContext.delete(i)
+                try managedContext.save()
+            }
+          }
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAll()
-
         CompleteLibrary.register(UITableViewCell.self,
                            forCellReuseIdentifier: "Cell")
         CompleteLibrary.dataSource = self

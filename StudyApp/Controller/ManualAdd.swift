@@ -23,7 +23,6 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
     }
     @IBAction func AddWordToLib(_ sender: Any) {
         save(originalWord: String(WordInput.text ?? "null"), translatedWord: String(TranslationInput.text ?? "null"))
-        print(fetchAll())
         WordInput.text = " "
         TranslationInput.text = " "
     }
@@ -48,21 +47,7 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
                }
            }
          
-           func fetchAll(){
-             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-               return
-             }
-             let managedContext = appDelegate.persistentContainer.viewContext
-             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WordsLibrary")
-             do {
-               let words = try managedContext.fetch(fetchRequest)
-               for i in words {
-                print(i.value(forKey: "addedWord"), " - ", i.value(forKey: "addedWordTranslation"))
-               }
-             } catch let error as NSError {
-               print("Could not fetch. \(error), \(error.userInfo)")
-             }
-           }
+
            
            func fetch(param:Int8) -> String {
                var outp = NSManagedObject()
