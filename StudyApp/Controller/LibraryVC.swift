@@ -14,7 +14,7 @@ import CoreData
 class LibraryVC: UIViewController {
     @IBOutlet weak var CompleteLibrary: UITableView!
     
-
+    
     var WordsDataBase = [NSManagedObject]()
     
     func fetchAll(){
@@ -41,7 +41,7 @@ class LibraryVC: UIViewController {
               do {
           let words = try managedContext.fetch(fetchRequest)
           for i in words {
-            if i.value(forKey: "addedWord") as? String == "der Kater" {
+            if i.value(forKey: "addedWord") as? String == " " {
                 managedContext.delete(i)
                 try managedContext.save()
             }
