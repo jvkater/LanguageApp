@@ -72,7 +72,7 @@
 		5F56434724701A600050205D /* LibraryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCellTableViewCell.swift; sourceTree = "<group>"; };
 		5F7183F7246E58C1002C84F4 /* ManualAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAdd.swift; sourceTree = "<group>"; };
 		5F72E8D12461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg"; sourceTree = "<group>"; };
-		5F7D0CBB243A7B6C00364709 /* StudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F7D0CBB243A7B6C00364709 /* Wordy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7D0CBE243A7B6C00364709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7D0CC0243A7B6C00364709 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5F7D0CC2243A7B6C00364709 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		5F7D0CBC243A7B6C00364709 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F7D0CBB243A7B6C00364709 /* StudyApp.app */,
+				5F7D0CBB243A7B6C00364709 /* Wordy.app */,
 				5F7D0CD1243A7B6D00364709 /* StudyAppTests.xctest */,
 				5F7D0CDC243A7B6E00364709 /* StudyAppUITests.xctest */,
 			);
@@ -249,7 +249,7 @@
 			);
 			name = StudyApp;
 			productName = StudyApp;
-			productReference = 5F7D0CBB243A7B6C00364709 /* StudyApp.app */;
+			productReference = 5F7D0CBB243A7B6C00364709 /* Wordy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5F7D0CD0243A7B6D00364709 /* StudyAppTests */ = {
@@ -565,13 +565,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZKP59Y2MW;
 				INFOPLIST_FILE = StudyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = personal.StudyApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wordy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -584,13 +584,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZKP59Y2MW;
 				INFOPLIST_FILE = StudyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = personal.StudyApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wordy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
