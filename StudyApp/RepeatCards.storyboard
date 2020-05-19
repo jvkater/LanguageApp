@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3K3-ox-Mpx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3K3-ox-Mpx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--Flashcard View-->
         <scene sceneID="ff4-33-ieS">
             <objects>
-                <viewController id="3K3-ox-Mpx" customClass="FlashcardView" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3K3-ox-Mpx" customClass="FlashcardView" customModule="Wordy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NZY-di-Phf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +41,7 @@
                                         <rect key="frame" x="64" y="247" width="290" height="403"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </containerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-va-IPo" customClass="noButton" customModule="StudyApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-va-IPo" customClass="noButton" customModule="Wordy" customModuleProvider="target">
                                         <rect key="frame" x="64" y="725" width="100" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="3Ez-4S-2nN"/>
@@ -53,7 +54,7 @@
                                             <action selector="IncorrectPressed:" destination="3K3-ox-Mpx" eventType="touchUpInside" id="1or-OG-Hif"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQu-zV-6px" customClass="yesButton" customModule="StudyApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQu-zV-6px" customClass="yesButton" customModule="Wordy" customModuleProvider="target">
                                         <rect key="frame" x="254" y="725" width="100" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="CJD-9W-JGD"/>
@@ -61,7 +62,7 @@
                                             <constraint firstAttribute="height" constant="45" id="p7b-1c-clh"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="vDj-nc-7ml"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Correct">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -110,7 +111,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hfh-qr-XLg" customClass="popDown" customModule="StudyApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hfh-qr-XLg" customClass="popDown" customModule="Wordy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="71" width="414" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -158,7 +159,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.57500153779999996" green="0.67817640300000004" blue="0.39994674920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsU-4N-ZCr" customClass="cardView" customModule="StudyApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsU-4N-ZCr" customClass="cardView" customModule="Wordy" customModuleProvider="target">
                                 <rect key="frame" x="64" y="299" width="286" height="401"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -202,7 +203,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="slider.horizontal.3" catalog="system" width="64" height="50"/>
-        <image name="smiley" catalog="system" width="64" height="60"/>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
+        <image name="smiley" catalog="system" width="128" height="121"/>
     </resources>
 </document>
