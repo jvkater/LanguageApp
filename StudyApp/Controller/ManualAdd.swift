@@ -31,7 +31,7 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
        return false
      }
     var backdropView: UIView = {
-    let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width,height: UIScreen.main.bounds.size.height))
+    let bdView = UIView()
           bdView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
           return bdView
       }()
@@ -88,7 +88,7 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(backdropView)
-        view.sendSubviewToBack(backdropView)
+        
         AddButton.layer.cornerRadius = 10
         AddButton.layer.maskedCorners = [.layerMaxXMaxYCorner]
         AddButton.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -108,7 +108,7 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
         self.TranslationInput.delegate = self
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ManualAddVC.handleTap(_:)))
-        backdropView.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture)
         
     }
     

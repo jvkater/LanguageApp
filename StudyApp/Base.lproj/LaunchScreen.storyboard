@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Du-fh-30I">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Du-fh-30I">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,17 +13,17 @@
             <objects>
                 <viewController id="1Du-fh-30I" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kYX-bv-Y51">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBU-Cp-I3X">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WordyLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8fi-Hl-rUr">
-                                        <rect key="frame" x="151" y="160" width="111" height="120"/>
+                                        <rect key="frame" x="130" y="160" width="60" height="60"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wordy Flashcards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1m-KI-YGb">
-                                        <rect key="frame" x="127" y="301" width="160" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wordy Flashcards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1m-KI-YGb">
+                                        <rect key="frame" x="80" y="245" width="160" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <nil key="highlightedColor"/>
@@ -30,11 +31,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.57500153779983521" green="0.6781764030456543" blue="0.39994674921035767" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="8fi-Hl-rUr" secondAttribute="trailing" constant="152" id="SSL-W5-sFM"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8fi-Hl-rUr" secondAttribute="trailing" constant="152" id="SSL-W5-sFM"/>
                                     <constraint firstItem="8fi-Hl-rUr" firstAttribute="top" secondItem="QBU-Cp-I3X" secondAttribute="top" constant="160" id="afa-SV-NUR"/>
                                     <constraint firstItem="c1m-KI-YGb" firstAttribute="centerX" secondItem="8fi-Hl-rUr" secondAttribute="centerX" id="cb9-sK-O65"/>
                                     <constraint firstItem="c1m-KI-YGb" firstAttribute="top" secondItem="8fi-Hl-rUr" secondAttribute="bottom" constant="25" id="cjJ-Ib-MJ5"/>
-                                    <constraint firstItem="8fi-Hl-rUr" firstAttribute="leading" secondItem="QBU-Cp-I3X" secondAttribute="leading" constant="151" id="nIm-fb-BtN"/>
+                                    <constraint firstItem="8fi-Hl-rUr" firstAttribute="centerX" secondItem="QBU-Cp-I3X" secondAttribute="centerX" id="ieC-Nr-xvI"/>
+                                    <constraint firstItem="8fi-Hl-rUr" firstAttribute="leading" relation="lessThanOrEqual" secondItem="QBU-Cp-I3X" secondAttribute="leading" constant="151" id="nIm-fb-BtN"/>
+                                    <constraint firstItem="c1m-KI-YGb" firstAttribute="centerX" secondItem="QBU-Cp-I3X" secondAttribute="centerX" id="wtY-ys-7MD"/>
                                 </constraints>
                             </view>
                         </subviews>

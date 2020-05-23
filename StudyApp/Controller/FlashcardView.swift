@@ -95,14 +95,7 @@ class FlashcardView: UIViewController {
         
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FlashcardView.handleTap(_:)))
-        headlineLabel.center.x = UIScreen.main.bounds.width/2
-        headlineLabel.center.y = UIScreen.main.bounds.size.height*0.07
-        BackButton.center.y = UIScreen.main.bounds.size.height*0.07
-        containerView.frame.size.width = UIScreen.main.bounds.width*0.7
-        containerView.frame.size.height = UIScreen.main.bounds.height/2
-        containerView.center = super.view.center
-        yesButton.center.y = UIScreen.main.bounds.height*0.9
-        noButton.center.y = UIScreen.main.bounds.height*0.9
+
         containerView.addGestureRecognizer(tapGesture)
         containerView.addSubview(initialState)
         initialState.addSubview(Word2Label)
@@ -114,7 +107,6 @@ class FlashcardView: UIViewController {
         WordLabel.center = flippedState.center
         WordLabel.text = WordsDataBase[NRound].value(forKey: "addedWordTranslation") as? String
         flippedState.isHidden=true
-        
         
     }
  
