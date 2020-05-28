@@ -64,7 +64,7 @@ class FlashcardView: UIViewController {
     }
     
     var initialState: UIView = {
-        let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.7,height: UIScreen.main.bounds.size.height/2))
+        let bdView = UIView(frame: CGRect(x: 0,y: 0,width: 0.78125 * UIScreen.main.bounds.size.width, height: 0.573944 * UIScreen.main.bounds.size.height))         //It's a very dirty trick and is basically a cheat. The value was taken from storyboard constraint
           bdView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         bdView.layer.cornerRadius = 10
         bdView.layer.borderWidth = 2
@@ -73,7 +73,7 @@ class FlashcardView: UIViewController {
       }()
     
     var flippedState: UIView = {
-        let fsView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width*0.7,height: UIScreen.main.bounds.size.height/2))
+        let fsView = UIView(frame: CGRect(x: 0,y: 0,width: 0.78125 * UIScreen.main.bounds.size.width, height: 0.573944 * UIScreen.main.bounds.size.height))
           fsView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         fsView.layer.borderWidth = 2
         fsView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
@@ -86,26 +86,32 @@ class FlashcardView: UIViewController {
         fetchAll()
 
         print(WordsDataBase.count)
-        let WordLabel = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
-         WordLabel.textAlignment = NSTextAlignment.center
-         WordLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        let Word2Label = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
-        Word2Label.textAlignment = NSTextAlignment.center
-        Word2Label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        WordsDataBase.shuffle()
+        
+        if WordsDataBase.count > 20 {
+            WordsDataBase = Array(WordsDataBase.prefix(20))
+        }
+        
+        let flippedStateWord = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
+         flippedStateWord.textAlignment = NSTextAlignment.center
+         flippedStateWord.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        let initialStateWord = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
+        initialStateWord.textAlignment = NSTextAlignment.center
+        initialStateWord.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FlashcardView.handleTap(_:)))
 
         containerView.addGestureRecognizer(tapGesture)
         containerView.addSubview(initialState)
-        initialState.addSubview(Word2Label)
-        Word2Label.center = initialState.center
-        Word2Label.text = WordsDataBase[NRound].value(forKey: "addedWord") as? String
+        initialState.addSubview(initialStateWord)
+        initialStateWord.center = initialState.center
+        initialStateWord.text = WordsDataBase[NRound].value(forKey: "addedWord") as? String
         
         containerView.addSubview(flippedState)
-        flippedState.addSubview(WordLabel)
-        WordLabel.center = flippedState.center
-        WordLabel.text = WordsDataBase[NRound].value(forKey: "addedWordTranslation") as? String
+        flippedState.addSubview(flippedStateWord)
+        flippedStateWord.center = flippedState.center
+        flippedStateWord.text = WordsDataBase[NRound].value(forKey: "addedWordTranslation") as? String
         flippedState.isHidden=true
         
     }

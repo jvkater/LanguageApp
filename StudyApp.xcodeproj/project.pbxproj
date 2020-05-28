@@ -10,7 +10,6 @@
 		5F07BC7624606061003A286A /* Ne storyboard_Alena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F07BC7524606061003A286A /* Ne storyboard_Alena.storyboard */; };
 		5F07BC7824606152003A286A /* AddFromAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07BC7724606152003A286A /* AddFromAudio.swift */; };
 		5F0FDEFB245C008C00D2B3D7 /* BookPage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FDEFA245C008C00D2B3D7 /* BookPage.jpeg */; };
-		5F21499B245F43C100B36F43 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F21499A245F43C100B36F43 /* earth.jpg */; };
 		5F21499D245F44EB00B36F43 /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F21499C245F44EB00B36F43 /* unnamed.jpg */; };
 		5F2149A0245F5CA700B36F43 /* WordyLogo_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F21499E245F5CA700B36F43 /* WordyLogo_120x120.png */; };
 		5F2149A1245F5CA700B36F43 /* WordyLogo_180x190.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F21499F245F5CA700B36F43 /* WordyLogo_180x190.png */; };
@@ -62,7 +61,6 @@
 		5F07BC7524606061003A286A /* Ne storyboard_Alena.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Ne storyboard_Alena.storyboard"; sourceTree = "<group>"; };
 		5F07BC7724606152003A286A /* AddFromAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFromAudio.swift; sourceTree = "<group>"; };
 		5F0FDEFA245C008C00D2B3D7 /* BookPage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BookPage.jpeg; sourceTree = "<group>"; };
-		5F21499A245F43C100B36F43 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = earth.jpg; path = ../../../../../Desktop/earth.jpg; sourceTree = "<group>"; };
 		5F21499C245F44EB00B36F43 /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
 		5F21499E245F5CA700B36F43 /* WordyLogo_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WordyLogo_120x120.png; sourceTree = "<group>"; };
 		5F21499F245F5CA700B36F43 /* WordyLogo_180x190.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WordyLogo_180x190.png; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 				5F21499E245F5CA700B36F43 /* WordyLogo_120x120.png */,
 				5F21499F245F5CA700B36F43 /* WordyLogo_180x190.png */,
 				5F21499C245F44EB00B36F43 /* unnamed.jpg */,
-				5F21499A245F43C100B36F43 /* earth.jpg */,
 				5F935337245EE1B9003B6151 /* WordyLogo.png */,
 				5F0FDEFA245C008C00D2B3D7 /* BookPage.jpeg */,
 				5F7D0CF6243A836100364709 /* bgpic.jpg */,
@@ -342,7 +339,6 @@
 				5F2149A1245F5CA700B36F43 /* WordyLogo_180x190.png in Resources */,
 				5F32E64C245DC3D20008B42A /* bgpic.jpg in Resources */,
 				5F72E8D22461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg in Resources */,
-				5F21499B245F43C100B36F43 /* earth.jpg in Resources */,
 				5FA6227124422F4800124E6A /* RepeatCards.storyboard in Resources */,
 				5F935338245EE1B9003B6151 /* WordyLogo.png in Resources */,
 				5F2149A0245F5CA700B36F43 /* WordyLogo_120x120.png in Resources */,
