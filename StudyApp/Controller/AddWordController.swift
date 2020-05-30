@@ -9,30 +9,32 @@
 import UIKit
 
  class AddWordController: UIViewController {
- 
-    var backdropView: UIView = {
-           let bdView = UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.size.width,height: UIScreen.main.bounds.size.height/2))
-                 bdView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
-                 return bdView
-             }()
-       var MenuView: UIView = {
-       let mView = UIView(frame: CGRect(x: 00,y: UIScreen.main.bounds.size.height/2,width: UIScreen.main.bounds.size.width,height: UIScreen.main.bounds.size.height/2))
-           mView.backgroundColor = .white
-           mView.layer.cornerRadius = 10
-             return mView
-         }()
-       override func viewDidLoad() {
+    @IBAction func GetFromCameraPressed(_ sender: Any) {
+        let refreshAlert = UIAlertController(title: "Note from developers", message: "Thank you for your interest in this functionality. We are now working tirelessly to implement this, and your interest is important for us.", preferredStyle: UIAlertController.Style.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+          print("Handle Ok logic here")
+          }))
+
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    @IBAction func GetFromAudioPressed(_ sender: Any) {
+        let refreshAlert = UIAlertController(title: "Note from developers", message: "Thank you for your interest in this functionality. We are now working tirelessly to implement this, and your interest is important for us.", preferredStyle: UIAlertController.Style.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+          print("Handle Ok logic here")
+          }))
+
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var backgroundView: UIView!
+    override func viewDidLoad() {
            super.viewDidLoad()
            
-           view.backgroundColor = .clear
-           view.addSubview(backdropView)
-           view.addSubview(MenuView)
-           
-           self.view.sendSubviewToBack(MenuView)
-           backdropView.alpha = 0.2
            
            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddWordController.handleTap(_:)))
-           backdropView.addGestureRecognizer(tapGesture)
+           backgroundView.addGestureRecognizer(tapGesture)
        }
        @objc func handleTap(_ sender: UITapGestureRecognizer) {
            dismiss(animated: true, completion: nil)

@@ -74,4 +74,3 @@ class FoodCell: UITableViewCell {
     @IBOutlet var plantDescription : UILabel?
     @IBOutlet var picture : UIImageView?
 }
-
