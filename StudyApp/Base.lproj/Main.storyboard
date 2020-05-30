@@ -245,7 +245,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dNZ-4z-MBj">
-                                <rect key="frame" x="0.0" y="-247" width="479" height="1332"/>
+                                <rect key="frame" x="0.0" y="-247" width="464" height="1219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyN-MW-WiD" userLabel="Text layer">
@@ -352,7 +352,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXG-GN-JEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="vii-Y1-oRG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-285" y="544"/>
+            <point key="canvasLocation" x="-285" y="542.95774647887322"/>
         </scene>
         <!--RepeatCards-->
         <scene sceneID="3dp-dW-rW4">
@@ -709,7 +709,6 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q6v-d8-NyC">
                                 <rect key="frame" x="0.0" y="93" width="320" height="475"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1J-QA-ToK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -739,14 +738,8 @@
                                     <constraint firstItem="w5N-ga-RS9" firstAttribute="centerY" secondItem="d1J-QA-ToK" secondAttribute="centerY" id="PNq-dk-2A4"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msw-bG-CNn">
-                                <rect key="frame" x="16" y="68" width="98" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5SM-Fr-Orq">
-                                <rect key="frame" x="208.5" y="68" width="82.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The words I know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msw-bG-CNn">
+                                <rect key="frame" x="96" y="68" width="128" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -755,16 +748,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="d1J-QA-ToK" firstAttribute="leading" secondItem="q1V-5X-stq" secondAttribute="leading" id="2Mg-Ff-HWq"/>
+                            <constraint firstItem="Msw-bG-CNn" firstAttribute="centerX" secondItem="hjH-U8-OFm" secondAttribute="centerX" id="3z2-N9-RZL"/>
                             <constraint firstItem="Msw-bG-CNn" firstAttribute="top" secondItem="d1J-QA-ToK" secondAttribute="bottom" constant="8" id="5DU-Vh-wKW"/>
                             <constraint firstItem="Q6v-d8-NyC" firstAttribute="bottom" secondItem="q1V-5X-stq" secondAttribute="bottom" id="CyO-Kh-TPD"/>
                             <constraint firstItem="d1J-QA-ToK" firstAttribute="trailing" secondItem="q1V-5X-stq" secondAttribute="trailing" id="RYh-n4-bhK"/>
-                            <constraint firstItem="Q6v-d8-NyC" firstAttribute="top" secondItem="5SM-Fr-Orq" secondAttribute="bottom" constant="7" id="UHi-Y3-J1N"/>
                             <constraint firstItem="Q6v-d8-NyC" firstAttribute="leading" secondItem="q1V-5X-stq" secondAttribute="leading" id="Uxh-11-Frz"/>
                             <constraint firstItem="Q6v-d8-NyC" firstAttribute="trailing" secondItem="q1V-5X-stq" secondAttribute="trailing" id="b60-Vz-cZS"/>
-                            <constraint firstItem="5SM-Fr-Orq" firstAttribute="top" secondItem="d1J-QA-ToK" secondAttribute="bottom" constant="8" id="iFB-0B-Bel"/>
                             <constraint firstItem="Q6v-d8-NyC" firstAttribute="top" secondItem="Msw-bG-CNn" secondAttribute="bottom" constant="7" id="mmj-HZ-fMe"/>
-                            <constraint firstItem="q1V-5X-stq" firstAttribute="trailing" secondItem="5SM-Fr-Orq" secondAttribute="trailing" constant="29" id="oYy-rT-ECh"/>
-                            <constraint firstItem="Msw-bG-CNn" firstAttribute="leading" secondItem="q1V-5X-stq" secondAttribute="leading" constant="16" id="qHP-nT-xDy"/>
                             <constraint firstItem="d1J-QA-ToK" firstAttribute="top" secondItem="hjH-U8-OFm" secondAttribute="top" id="rF4-Fd-NAg"/>
                             <constraint firstItem="d1J-QA-ToK" firstAttribute="height" secondItem="hjH-U8-OFm" secondAttribute="height" multiplier="0.105634" id="wgs-i3-8dz"/>
                         </constraints>

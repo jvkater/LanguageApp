@@ -32,7 +32,7 @@ class LibraryVC: UIViewController {
         print("Could not fetch. \(error), \(error.userInfo)")
       }
     }
-    func deleteWord () {
+    func deleteWord (wordToDelete:String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
           return
         }
@@ -41,7 +41,7 @@ class LibraryVC: UIViewController {
               do {
           let words = try managedContext.fetch(fetchRequest)
           for i in words {
-            if i.value(forKey: "addedWord") as? String == " " {
+            if i.value(forKey: "addedWord") as? String == wordToDelete {
                 managedContext.delete(i)
                 try managedContext.save()
             }
@@ -78,20 +78,40 @@ extension LibraryVC: UITableViewDataSource {
                  numberOfRowsInSection section: Int) -> Int {
     return WordsDataBase.count
   }
-  
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle:   UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            deleteWord(wordToDelete: (WordsDataBase[indexPath.row].value(forKey: "addedWord") as? String)!)
+            WordsDataBase.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .middle)
+            tableView.endUpdates()
+        }
+    }
+    
   func tableView(_ tableView: UITableView,
                  cellForRowAt indexPath: IndexPath)
-                 -> UITableViewCell {
+    -> UITableViewCell {
     let originalWord = WordsDataBase[indexPath.row]
-    let cell =
-      tableView.dequeueReusableCell(withIdentifier: "Cell",
-                                    for: indexPath)
-                    
+    // let cell =
+    //  tableView.dequeueReusableCell(withIdentifier: "Cell",
+      //                              for: indexPath)
+       
+    let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "Cell")
+        
     cell.textLabel?.text = originalWord.value(forKey: "addedWord") as? String
-                    let label2 = UILabel(frame: CGRect(x: 210, y: 10, width: 110, height: 50))
-                    label2.center.y = cell.center.y
-                    label2.text = originalWord.value(forKey: "addedWordTranslation") as? String
-                    cell.contentView.addSubview(label2)
+    cell.detailTextLabel?.text = originalWord.value(forKey: "addedWordTranslation") as? String
+        
+    cell.accessoryType = UITableViewCell.AccessoryType.none
+    cell.accessoryView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+    cell.accessoryView?.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+
+                   // label2.center.y = cell.center.y
+                    //label2.text = originalWord.value(forKey: "addedWordTranslation") as? String
+                   // cell.contentView.addSubview(label2)
     return cell
   }
 }
