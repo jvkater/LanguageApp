@@ -108,7 +108,7 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
         self.TranslationInput.delegate = self
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ManualAddVC.handleTap(_:)))
-        view.addGestureRecognizer(tapGesture)
+        backdropView.addGestureRecognizer(tapGesture)
         
     }
     

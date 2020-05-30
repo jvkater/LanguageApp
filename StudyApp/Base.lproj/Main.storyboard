@@ -472,7 +472,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="oaq-ze-yP3" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3Bb-zb-c0o"/>
+                                            <segue destination="oaq-ze-yP3" kind="show" id="3Bb-zb-c0o"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yax-8S-5Lq">
@@ -612,18 +612,18 @@
             <objects>
                 <viewController id="oaq-ze-yP3" customClass="AddWordController" customModule="Wordy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k0k-EG-ung">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5U-ze-eyI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5U-ze-eyI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2j-MM-cbZ">
-                                <rect key="frame" x="0.0" y="318" width="320" height="250"/>
+                                <rect key="frame" x="0.0" y="307" width="320" height="241"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTI-Vk-z07" customClass="MainMenuButton" customModule="Wordy" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="81" width="256" height="30"/>
+                                        <rect key="frame" x="32" y="78.5" width="256" height="28"/>
                                         <state key="normal" title="Get from camera">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -632,7 +632,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r12-kg-1CF" customClass="MainMenuButton" customModule="Wordy" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="138" width="256" height="30"/>
+                                        <rect key="frame" x="32" y="133.5" width="256" height="27.5"/>
                                         <state key="normal" title="Get from audio">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -641,7 +641,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-Or-BQc" customClass="MainMenuButton" customModule="Wordy" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="194" width="256" height="30"/>
+                                        <rect key="frame" x="32" y="187" width="256" height="28"/>
                                         <state key="normal" title="Go back">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -650,7 +650,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdG-6O-jGJ" customClass="MainMenuButton" customModule="Wordy" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="28" width="256" height="30"/>
+                                        <rect key="frame" x="32" y="28" width="256" height="27.5"/>
                                         <state key="normal" title="Type manually">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>

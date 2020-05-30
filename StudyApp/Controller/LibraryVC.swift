@@ -96,10 +96,7 @@ extension LibraryVC: UITableViewDataSource {
                  cellForRowAt indexPath: IndexPath)
     -> UITableViewCell {
     let originalWord = WordsDataBase[indexPath.row]
-    // let cell =
-    //  tableView.dequeueReusableCell(withIdentifier: "Cell",
-      //                              for: indexPath)
-       
+
     let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "Cell")
         
     cell.textLabel?.text = originalWord.value(forKey: "addedWord") as? String
@@ -109,9 +106,6 @@ extension LibraryVC: UITableViewDataSource {
     cell.accessoryView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
     cell.accessoryView?.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
 
-                   // label2.center.y = cell.center.y
-                    //label2.text = originalWord.value(forKey: "addedWordTranslation") as? String
-                   // cell.contentView.addSubview(label2)
     return cell
   }
 }
