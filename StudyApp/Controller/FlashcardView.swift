@@ -107,6 +107,7 @@ class FlashcardView: UIViewController {
         initialState.addSubview(initialStateWord)
         initialStateWord.center = initialState.center
         initialStateWord.text = WordsDataBase[NRound].value(forKey: "addedWord") as? String
+        // Add error handling for empty library!
         
         containerView.addSubview(flippedState)
         flippedState.addSubview(flippedStateWord)
