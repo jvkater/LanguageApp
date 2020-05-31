@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 
-
 class FlashcardView: UIViewController {
     
     var NRound = 0
@@ -43,8 +42,10 @@ class FlashcardView: UIViewController {
         let translationPoint = sender.translation(in: view)
         cardView.center = CGPoint(x: view.center.x+translationPoint.x, y: view.center.y+translationPoint.y)
     }
+    // Main container with cards
     @IBOutlet weak var containerView: UIView!
     
+    // Database processing
     var WordsDataBase = [NSManagedObject]()
     
     func fetchAll(){
@@ -81,6 +82,9 @@ class FlashcardView: UIViewController {
           return fsView
       }()
     
+    let chararacterSet = CharacterSet.whitespacesAndNewlines.union(.punctuationCharacters)
+    // Needed to filter out lines of text later on
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAll()
@@ -92,12 +96,16 @@ class FlashcardView: UIViewController {
             WordsDataBase = Array(WordsDataBase.prefix(20))
         }
         
-        let flippedStateWord = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
-         flippedStateWord.textAlignment = NSTextAlignment.center
-         flippedStateWord.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        let initialStateWord = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
+       let initialStateWord = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 51))
         initialStateWord.textAlignment = NSTextAlignment.center
         initialStateWord.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        let flippedStateWord = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
+        flippedStateWord.textAlignment = NSTextAlignment.center
+        flippedStateWord.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+
+        
+       
         
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FlashcardView.handleTap(_:)))
@@ -107,12 +115,33 @@ class FlashcardView: UIViewController {
         initialState.addSubview(initialStateWord)
         initialStateWord.center = initialState.center
         initialStateWord.text = WordsDataBase[NRound].value(forKey: "addedWord") as? String
+        
+        if (initialStateWord.text?.components(separatedBy: chararacterSet).filter{ !$0.isEmpty }.count)! > 1 {
+            initialStateWord.frame.size.height = 51
+            initialStateWord.lineBreakMode = .byWordWrapping
+            initialStateWord.numberOfLines = 2
+        } else {
+            initialStateWord.numberOfLines = 1;
+            initialStateWord.frame.size.height = 21
+            initialStateWord.minimumScaleFactor = 0.3;
+            initialStateWord.adjustsFontSizeToFitWidth = true;
+        }
         // Add error handling for empty library!
         
         containerView.addSubview(flippedState)
         flippedState.addSubview(flippedStateWord)
         flippedStateWord.center = flippedState.center
         flippedStateWord.text = WordsDataBase[NRound].value(forKey: "addedWordTranslation") as? String
+        if (flippedStateWord.text?.components(separatedBy: chararacterSet).filter{ !$0.isEmpty }.count)! > 1 {
+                   flippedStateWord.frame.size.height = 51
+                   flippedStateWord.lineBreakMode = .byWordWrapping
+                   flippedStateWord.numberOfLines = 2
+               } else {
+                   flippedStateWord.numberOfLines = 1;
+                   flippedStateWord.frame.size.height = 21
+                   flippedStateWord.minimumScaleFactor = 0.3;
+                   flippedStateWord.adjustsFontSizeToFitWidth = true;
+               }
         flippedState.isHidden=true
         
     }
@@ -140,6 +169,16 @@ class FlashcardView: UIViewController {
         frontside.addSubview(WordLabel)
         WordLabel.center = frontside.center
         WordLabel.text = frontword
+        if (WordLabel.text?.components(separatedBy: chararacterSet).filter{ !$0.isEmpty }.count)! > 1 {
+            WordLabel.frame.size.height = 51
+            WordLabel.lineBreakMode = .byWordWrapping
+            WordLabel.numberOfLines = 2
+        } else {
+            WordLabel.numberOfLines = 1;
+            WordLabel.frame.size.height = 21
+            WordLabel.minimumScaleFactor = 0.3;
+            WordLabel.adjustsFontSizeToFitWidth = true;
+        }
         
         let WordLabelBackSide = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
         WordLabelBackSide.textAlignment = NSTextAlignment.center
@@ -150,6 +189,16 @@ class FlashcardView: UIViewController {
         backside.addSubview(WordLabelBackSide)
         WordLabelBackSide.center = backside.center
         WordLabelBackSide.text = backword
+        if (WordLabelBackSide.text?.components(separatedBy: chararacterSet).filter{ !$0.isEmpty }.count)! > 1 {
+            WordLabelBackSide.frame.size.height = 51
+            WordLabelBackSide.lineBreakMode = .byWordWrapping
+            WordLabelBackSide.numberOfLines = 2
+        } else {
+            WordLabelBackSide.numberOfLines = 1;
+            WordLabelBackSide.frame.size.height = 21
+            WordLabelBackSide.minimumScaleFactor = 0.3;
+            WordLabelBackSide.adjustsFontSizeToFitWidth = true;
+        }
         
         if backside.isHidden == false {
             UIView.transition(from: backside, to: frontside, duration: 0.4, options: .transitionFlipFromRight, completion: nil)
