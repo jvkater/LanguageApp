@@ -38,7 +38,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceo-iD-99l">
-                                        <rect key="frame" x="0.0" y="219" width="122" height="30"/>
+                                        <rect key="frame" x="0.0" y="208" width="122" height="41"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Dismiss">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,7 +54,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhQ-ho-vyX">
-                                        <rect key="frame" x="122" y="219" width="122" height="30"/>
+                                        <rect key="frame" x="122" y="208" width="122" height="41"/>
                                         <color key="backgroundColor" red="0.57500153779999996" green="0.67817640300000004" blue="0.39994674920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Add">
                                             <color key="titleColor" red="0.57500153779999996" green="0.67817640300000004" blue="0.39994674920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -89,6 +89,7 @@
                                     <constraint firstItem="RiP-Ju-yxf" firstAttribute="centerX" secondItem="JRh-MN-tS9" secondAttribute="centerX" id="J71-6z-dII"/>
                                     <constraint firstAttribute="trailing" secondItem="wXv-ch-coX" secondAttribute="trailing" constant="93" id="JO5-8Q-v26"/>
                                     <constraint firstAttribute="trailing" secondItem="JRh-MN-tS9" secondAttribute="trailing" constant="60" id="Kzv-DY-c2t"/>
+                                    <constraint firstItem="ceo-iD-99l" firstAttribute="height" secondItem="yVU-jO-TrY" secondAttribute="height" multiplier="0.164659" id="LwO-92-3kf"/>
                                     <constraint firstAttribute="trailing" secondItem="GhQ-ho-vyX" secondAttribute="trailing" id="MTB-ob-yHX"/>
                                     <constraint firstAttribute="centerY" secondItem="JRh-MN-tS9" secondAttribute="bottom" id="Nip-gI-yCC"/>
                                     <constraint firstAttribute="bottom" secondItem="ceo-iD-99l" secondAttribute="bottom" id="Nxa-Fx-dVX"/>
@@ -106,6 +107,7 @@
                                     <constraint firstItem="kcM-mL-zQ8" firstAttribute="centerX" secondItem="yVU-jO-TrY" secondAttribute="centerX" id="s93-e7-64D"/>
                                     <constraint firstItem="JRh-MN-tS9" firstAttribute="leading" secondItem="yVU-jO-TrY" secondAttribute="leading" constant="59" id="ssq-c1-z9q"/>
                                     <constraint firstItem="JRh-MN-tS9" firstAttribute="top" secondItem="kcM-mL-zQ8" secondAttribute="bottom" constant="5.5" id="tLU-4Y-J8J"/>
+                                    <constraint firstItem="GhQ-ho-vyX" firstAttribute="height" secondItem="yVU-jO-TrY" secondAttribute="height" multiplier="0.164659" id="zv2-Mn-p3f"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -436,7 +438,7 @@
                                         <rect key="frame" x="89" y="34" width="180" height="10"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memorize words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-73-U5K">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memorize words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-73-U5K">
                                         <rect key="frame" x="89" y="16" width="126.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
