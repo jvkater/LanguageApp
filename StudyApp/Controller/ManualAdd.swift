@@ -30,6 +30,15 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {        self.view.endEditing(true)
        return false
      }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+        return false
+        } else {
+            return true
+        }
+    }
+    
     var backdropView: UIView = {
     let bdView = UIView()
           bdView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
