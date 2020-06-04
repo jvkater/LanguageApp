@@ -96,7 +96,7 @@ class FlashcardView: UIViewController {
             WordsDataBase = Array(WordsDataBase.prefix(20))
         }
         
-       let initialStateWord = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 51))
+       let initialStateWord = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
         initialStateWord.textAlignment = NSTextAlignment.center
         initialStateWord.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
@@ -104,10 +104,7 @@ class FlashcardView: UIViewController {
         flippedStateWord.textAlignment = NSTextAlignment.center
         flippedStateWord.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 
-        
-       
-        
-        
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FlashcardView.handleTap(_:)))
 
         containerView.addGestureRecognizer(tapGesture)
@@ -117,11 +114,15 @@ class FlashcardView: UIViewController {
         initialStateWord.text = WordsDataBase[NRound].value(forKey: "addedWord") as? String
         
         if (initialStateWord.text?.components(separatedBy: chararacterSet).filter{ !$0.isEmpty }.count)! > 1 {
-            initialStateWord.frame.size.height = 51
+            if initialStateWord.isTruncated {
+                initialStateWord.frame.size.height = 41
+            } else {
+                initialStateWord.frame.size.height = 21
+            }
             initialStateWord.lineBreakMode = .byWordWrapping
-            initialStateWord.numberOfLines = 2
+            initialStateWord.numberOfLines = 0
         } else {
-            initialStateWord.numberOfLines = 1;
+            initialStateWord.numberOfLines = 0;
             initialStateWord.frame.size.height = 21
             initialStateWord.minimumScaleFactor = 0.3;
             initialStateWord.adjustsFontSizeToFitWidth = true;
@@ -133,11 +134,15 @@ class FlashcardView: UIViewController {
         flippedStateWord.center = flippedState.center
         flippedStateWord.text = WordsDataBase[NRound].value(forKey: "addedWordTranslation") as? String
         if (flippedStateWord.text?.components(separatedBy: chararacterSet).filter{ !$0.isEmpty }.count)! > 1 {
-                   flippedStateWord.frame.size.height = 51
+                   if flippedStateWord.isTruncated {
+                       flippedStateWord.frame.size.height = 41
+                   } else {
+                       flippedStateWord.frame.size.height = 21
+                   }
                    flippedStateWord.lineBreakMode = .byWordWrapping
-                   flippedStateWord.numberOfLines = 2
+                   flippedStateWord.numberOfLines = 0
                } else {
-                   flippedStateWord.numberOfLines = 1;
+                   flippedStateWord.numberOfLines = 0;
                    flippedStateWord.frame.size.height = 21
                    flippedStateWord.minimumScaleFactor = 0.3;
                    flippedStateWord.adjustsFontSizeToFitWidth = true;
@@ -170,11 +175,15 @@ class FlashcardView: UIViewController {
         WordLabel.center = frontside.center
         WordLabel.text = frontword
         if (WordLabel.text?.components(separatedBy: chararacterSet).filter{ !$0.isEmpty }.count)! > 1 {
-            WordLabel.frame.size.height = 51
+            if WordLabel.isTruncated {
+                WordLabel.frame.size.height = 41
+            } else {
+                WordLabel.frame.size.height = 21
+            }
             WordLabel.lineBreakMode = .byWordWrapping
-            WordLabel.numberOfLines = 2
+            WordLabel.numberOfLines = 0
         } else {
-            WordLabel.numberOfLines = 1;
+            WordLabel.numberOfLines = 0;
             WordLabel.frame.size.height = 21
             WordLabel.minimumScaleFactor = 0.3;
             WordLabel.adjustsFontSizeToFitWidth = true;
@@ -190,11 +199,15 @@ class FlashcardView: UIViewController {
         WordLabelBackSide.center = backside.center
         WordLabelBackSide.text = backword
         if (WordLabelBackSide.text?.components(separatedBy: chararacterSet).filter{ !$0.isEmpty }.count)! > 1 {
-            WordLabelBackSide.frame.size.height = 51
+            if WordLabelBackSide.isTruncated {
+                WordLabelBackSide.frame.size.height = 41
+            } else {
+                WordLabelBackSide.frame.size.height = 21
+            }
             WordLabelBackSide.lineBreakMode = .byWordWrapping
-            WordLabelBackSide.numberOfLines = 2
+            WordLabelBackSide.numberOfLines = 0
         } else {
-            WordLabelBackSide.numberOfLines = 1;
+            WordLabelBackSide.numberOfLines = 0;
             WordLabelBackSide.frame.size.height = 21
             WordLabelBackSide.minimumScaleFactor = 0.3;
             WordLabelBackSide.adjustsFontSizeToFitWidth = true;
@@ -206,3 +219,12 @@ class FlashcardView: UIViewController {
     }
 }
 
+extension UILabel {
+    var isTruncated: Bool {
+        guard let labelText = text as? NSString else {
+            return false
+        }
+        let size = labelText.size(withAttributes: [NSAttributedString.Key.font: font])
+        return size.width > self.bounds.width
+    }
+}
