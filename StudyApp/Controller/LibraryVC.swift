@@ -104,7 +104,7 @@ extension LibraryVC: UITableViewDataSource {
         
     cell.accessoryType = UITableViewCell.AccessoryType.none
     cell.accessoryView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-    cell.accessoryView?.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+    cell.accessoryView?.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
 
     return cell
   }
