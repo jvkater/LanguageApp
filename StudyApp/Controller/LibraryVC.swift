@@ -32,6 +32,7 @@ class LibraryVC: UIViewController {
         print("Could not fetch. \(error), \(error.userInfo)")
       }
     }
+    
     func deleteWord (wordToDelete:String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
           return
@@ -50,10 +51,13 @@ class LibraryVC: UIViewController {
           print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAll()
+        
         CompleteLibrary.register(UITableViewCell.self,
                            forCellReuseIdentifier: "Cell")
         CompleteLibrary.dataSource = self
@@ -112,6 +116,11 @@ extension LibraryVC: UITableViewDataSource {
             light_pic = UIImage(named: "Light_Green.png")
         }
     
+    //print("Word is ", originalWord.value(forKey: "addedWord") as? String)
+    //print("Success = ", originalWord.value(forKey: "successfullRecalls") as? Int)
+    //print("Failure = ", originalWord.value(forKey: "unsuccessfullRecalls") as? Int)
+    //print("Total = ", originalWord.value(forKey: "totalRecalls") as? Int)
+    //print("Word status = ", wordStat)
     cell.accessoryView = UIImageView(image: light_pic)
     cell.accessoryView?.frame = CGRect(x:0, y:0, width: 50, height: 15)
 
