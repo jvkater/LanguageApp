@@ -90,10 +90,13 @@ class FlashcardView: UIViewController {
             }
             
             // updating clusterization
-            let successRate = Double((successfullRecalls + 1) / (totalRecalls + 1))
-            if  successRate < 0.5 {
+            print(successfullRecalls)
+            print(totalRecalls)
+            let successRate = (Double(successfullRecalls) + 1.0) / (Double(totalRecalls) + 1.0)
+            print(successRate)
+            if  successRate <= 0.5 {
                 item[0].setValue("Bad", forKey: "recallCluster")
-            } else if successRate < 0.8 {
+            } else if successRate <= 0.8 {
                 item[0].setValue("Decent", forKey: "recallCluster")
             } else {
                 item[0].setValue("Good", forKey: "recallCluster")
