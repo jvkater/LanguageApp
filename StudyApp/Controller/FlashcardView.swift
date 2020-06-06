@@ -83,17 +83,16 @@ class FlashcardView: UIViewController {
             item[0].setValue(totalRecalls + 1, forKey: "totalRecalls")
             
             // updating number of recalls
+            var successRate = 0.0
             if updateType == "success" {
                 item[0].setValue(successfullRecalls + 1, forKey: "successfullRecalls")
+                successRate = (Double(successfullRecalls) + 1.0) / (Double(totalRecalls) + 1.0)
             } else {
                 item[0].setValue(unsuccessfullRecalls + 1, forKey: "unsuccessfullRecalls")
+                successRate = (Double(successfullRecalls)) / (Double(totalRecalls) + 1.0)
             }
             
             // updating clusterization
-            print(successfullRecalls)
-            print(totalRecalls)
-            let successRate = (Double(successfullRecalls) + 1.0) / (Double(totalRecalls) + 1.0)
-            print(successRate)
             if  successRate <= 0.5 {
                 item[0].setValue("Bad", forKey: "recallCluster")
             } else if successRate <= 0.8 {
