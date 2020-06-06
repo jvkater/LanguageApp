@@ -113,14 +113,14 @@ extension LibraryVC: UITableViewDataSource {
         if wordStat == "Decent" {
             light_pic = UIImage(named: "Yellow_Light.png")
         } else if wordStat == "Good" {
-            light_pic = UIImage(named: "Light_Green.png")
+            light_pic = UIImage(named: "Green_Light.png")
         }
     
     //print("Word is ", originalWord.value(forKey: "addedWord") as? String)
     //print("Success = ", originalWord.value(forKey: "successfullRecalls") as? Int)
     //print("Failure = ", originalWord.value(forKey: "unsuccessfullRecalls") as? Int)
     //print("Total = ", originalWord.value(forKey: "totalRecalls") as? Int)
-    //print("Word status = ", wordStat)
+   // print("Word status = ", wordStat)
     cell.accessoryView = UIImageView(image: light_pic)
     cell.accessoryView?.frame = CGRect(x:0, y:0, width: 50, height: 15)
 
