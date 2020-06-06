@@ -21,7 +21,8 @@ class FlashcardView: UIViewController {
     @IBOutlet weak var noButton: noButton!
     
     @IBAction func CorrectPressed(_ sender: Any) {
-
+        updateWordStats(word: ((WordsDataBase[NRound].value(forKey: "addedWord") as? String)!), updateType: "success")
+        
         if WordsDataBase.count > NRound+1 {
             NRound+=1 } else {
             NRound = 0
@@ -30,6 +31,7 @@ class FlashcardView: UIViewController {
     }
     
     @IBAction func IncorrectPressed(_ sender: Any) {
+        updateWordStats(word: ((WordsDataBase[NRound].value(forKey: "addedWord") as? String)!), updateType: "failure")
         if WordsDataBase.count > NRound+1 {
             NRound+=1 } else {
             NRound = 0
@@ -63,6 +65,49 @@ class FlashcardView: UIViewController {
         print("Could not fetch. \(error), \(error.userInfo)")
       }
     }
+    
+    func updateWordStats(word:String, updateType:String){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WordsLibrary")
+        fetchRequest.predicate = NSPredicate(format: "addedWord = %@", word)
+        do {
+            let item = try managedContext.fetch(fetchRequest)
+            
+            let successfullRecalls = item[0].value(forKey: "successfullRecalls") as! Int
+            let unsuccessfullRecalls = item[0].value(forKey: "unsuccessfullRecalls") as! Int
+            let totalRecalls = item[0].value(forKey: "totalRecalls") as! Int
+            
+            item[0].setValue(totalRecalls + 1, forKey: "totalRecalls")
+            
+            // updating number of recalls
+            if updateType == "success" {
+                item[0].setValue(successfullRecalls + 1, forKey: "successfullRecalls")
+            } else {
+                item[0].setValue(unsuccessfullRecalls + 1, forKey: "unsuccessfullRecalls")
+            }
+            
+            // updating clusterization
+            let successRate = Double((successfullRecalls + 1) / (totalRecalls + 1))
+            if  successRate < 0.5 {
+                item[0].setValue("Bad", forKey: "recallCluster")
+            } else if successRate < 0.8 {
+                item[0].setValue("Decent", forKey: "recallCluster")
+            } else {
+                item[0].setValue("Good", forKey: "recallCluster")
+            }
+            
+            try managedContext.save()
+            
+        } catch let error as NSError {
+            print("Something went wronf")
+        }
+        
+        
+    }
+    
     
     var initialState: UIView = {
         let bdView = UIView(frame: CGRect(x: 0,y: 0,width: 0.78125 * UIScreen.main.bounds.size.width, height: 0.573944 * UIScreen.main.bounds.size.height))         //It's a very dirty trick and is basically a cheat. The value was taken from storyboard constraint
