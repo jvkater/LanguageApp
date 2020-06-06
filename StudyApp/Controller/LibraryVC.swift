@@ -103,8 +103,17 @@ extension LibraryVC: UITableViewDataSource {
     cell.detailTextLabel?.text = originalWord.value(forKey: "addedWordTranslation") as? String
         
     cell.accessoryType = UITableViewCell.AccessoryType.none
-    cell.accessoryView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-    cell.accessoryView?.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+    // customizable part
+    let wordStat = originalWord.value(forKey: "recallCluster") as? String
+    var light_pic = UIImage(named: "Red_Light.png") //Default image
+        if wordStat == "Decent" {
+            light_pic = UIImage(named: "Yellow_Light.png")
+        } else if wordStat == "Good" {
+            light_pic = UIImage(named: "Light_Green.png")
+        }
+    
+    cell.accessoryView = UIImageView(image: light_pic)
+    cell.accessoryView?.frame = CGRect(x:0, y:0, width: 50, height: 15)
 
     return cell
   }
