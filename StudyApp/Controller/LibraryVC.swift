@@ -109,11 +109,11 @@ extension LibraryVC: UITableViewDataSource {
     cell.accessoryType = UITableViewCell.AccessoryType.none
     // customizable part
     let wordStat = originalWord.value(forKey: "recallCluster") as? String
-    var light_pic = UIImage(named: "Red_Light.png") //Default image
+    var light_pic = UIImage(named: "Red_1.png") //Default image
         if wordStat == "Decent" {
-            light_pic = UIImage(named: "Yellow_Light.png")
+            light_pic = UIImage(named: "Yellow_1.png")
         } else if wordStat == "Good" {
-            light_pic = UIImage(named: "Green_Light.png")
+            light_pic = UIImage(named: "Green_1.png")
         }
     
     //print("Word is ", originalWord.value(forKey: "addedWord") as? String)
@@ -122,7 +122,7 @@ extension LibraryVC: UITableViewDataSource {
     //print("Total = ", originalWord.value(forKey: "totalRecalls") as? Int)
    // print("Word status = ", wordStat)
     cell.accessoryView = UIImageView(image: light_pic)
-    cell.accessoryView?.frame = CGRect(x:0, y:0, width: 50, height: 15)
+    cell.accessoryView?.frame = CGRect(x:0, y:0, width: 40, height: 12)
 
     return cell
   }
