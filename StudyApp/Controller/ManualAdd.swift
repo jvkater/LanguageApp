@@ -54,6 +54,7 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
            let WordCard = NSManagedObject(entity: entity, insertInto: managedContext)
                WordCard.setValue(originalWord, forKeyPath: "addedWord")
                WordCard.setValue(translatedWord, forKeyPath: "addedWordTranslation")
+                WordCard.setValue("Bad", forKey: "recallCluster")
                do {
                    try managedContext.save()
                } catch let _ as NSError {
