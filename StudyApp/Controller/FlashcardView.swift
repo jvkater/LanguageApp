@@ -14,9 +14,7 @@ class FlashcardView: UIViewController {
     var NRound = 0
 
     @IBOutlet weak var headlineLabel: UIButton!
-    
     @IBOutlet weak var BackButton: UIButton!
-    
     @IBOutlet weak var yesButton: yesButton!
     @IBOutlet weak var noButton: noButton!
     
@@ -132,16 +130,78 @@ class FlashcardView: UIViewController {
     let chararacterSet = CharacterSet.whitespacesAndNewlines.union(.punctuationCharacters)
     // Needed to filter out lines of text later on
     
+    func dbPreprocessing()  {
+        // Will be initiated always after check for length, so we know that count is > 20
+        var goodEntries = [NSManagedObject]()
+        var decentEntries = [NSManagedObject]()
+        var badEntries = [NSManagedObject]()
+        var tempDB = [NSManagedObject]()
+        var insufficientWords = 0
+        
+        
+        for i in WordsDataBase {
+            if i.value(forKey: "recallCluster") as! String == "Bad"{
+                badEntries.append(i)
+            } else if i.value(forKey: "recallCluster") as! String == "Decent" {
+                decentEntries.append(i)
+            } else {
+                goodEntries.append(i)
+            }
+        }
+        
+        //evaluating the need for additional words from other stacks
+        if badEntries.count < 11 {
+            insufficientWords += 11 - badEntries.count
+        }
+        if decentEntries.count < 6 {
+            insufficientWords += 6 - decentEntries.count
+        }
+        if goodEntries.count < 3 {
+            insufficientWords += 3 - goodEntries.count
+        }
+        
+        if badEntries.count >= 11 + insufficientWords {
+            tempDB.append(contentsOf: Array(badEntries.prefix(11 + insufficientWords)))
+            insufficientWords = 0
+        } else if badEntries.count <= 11 {
+            tempDB.append(contentsOf: badEntries)
+        } else {
+            tempDB.append(contentsOf: badEntries)
+            insufficientWords -= insufficientWords - badEntries.count
+        }
+        
+        if decentEntries.count >= 6 + insufficientWords {
+            tempDB.append(contentsOf: Array(decentEntries.prefix(6 + insufficientWords)))
+            insufficientWords = 0
+        } else if decentEntries.count <= 6 {
+            tempDB.append(contentsOf: decentEntries)
+        } else {
+            tempDB.append(contentsOf: decentEntries)
+            insufficientWords -= insufficientWords - badEntries.count
+        }
+        
+        if goodEntries.count >= 3 + insufficientWords {
+            tempDB.append(contentsOf: Array(goodEntries.prefix(3 + insufficientWords)))
+            insufficientWords = 0
+        } else if goodEntries.count <= 3 {
+            tempDB.append(contentsOf: tempDB)
+        } //I suppose that by this time all the insufficient words are already exhausted
+        
+        
+        WordsDataBase = tempDB
+        print(tempDB)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAll()
-
-        print(WordsDataBase.count)
         WordsDataBase.shuffle()
+        print(WordsDataBase.count)
         
         if WordsDataBase.count > 20 {
-            WordsDataBase = Array(WordsDataBase.prefix(20))
+            dbPreprocessing()
         }
+        
         
        let initialStateWord = UILabel(frame: CGRect(x: 30, y:110, width: 180, height: 21))
         initialStateWord.textAlignment = NSTextAlignment.center
