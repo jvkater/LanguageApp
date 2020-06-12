@@ -69,8 +69,8 @@ class AddWordMainView: UIView {
     }
 }
 
-class FoodCell: UITableViewCell {
-    @IBOutlet var name : UILabel?
-    @IBOutlet var plantDescription : UILabel?
-    @IBOutlet var picture : UIImageView?
+class nameInputField: UITextField {
+    override func awakeFromNib() {
+        layer.cornerRadius = 10
+    }
 }
