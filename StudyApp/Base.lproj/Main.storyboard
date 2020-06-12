@@ -362,10 +362,80 @@
             </objects>
             <point key="canvasLocation" x="-2179" y="-465"/>
         </scene>
-        <!--View Controller-->
+        <!--User CreationVC-->
+        <scene sceneID="2om-y5-brG">
+            <objects>
+                <viewController storyboardIdentifier="registrationVC" id="iUb-RD-xT4" customClass="UserCreationVC" customModule="Wordy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SqY-08-ICY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WordyLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-tS-5ai">
+                                <rect key="frame" x="114" y="53" width="92" height="60"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg0-2v-0RD">
+                                <rect key="frame" x="141" y="152" width="38.5" height="17.5"/>
+                                <string key="text">Hello!
+  </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pN5-RE-6Ge" customClass="nameInputField" customModule="Wordy" customModuleProvider="target">
+                                <rect key="frame" x="60" y="267" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before we start, we'd like to know your name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78q-sw-CN9">
+                                <rect key="frame" x="16" y="196" width="288" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnd-2p-0BX" customClass="MainMenuButton" customModule="Wordy" customModuleProvider="target">
+                                <rect key="frame" x="104" y="308" width="112" height="30"/>
+                                <state key="normal" title="Let's start!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="userInputFinished:" destination="iUb-RD-xT4" eventType="touchUpInside" id="QF0-8H-Aj0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57500153779999996" green="0.67817640300000004" blue="0.39994674920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Hg0-2v-0RD" firstAttribute="centerX" secondItem="SqY-08-ICY" secondAttribute="centerX" id="0kU-Ir-3hW"/>
+                            <constraint firstItem="pN5-RE-6Ge" firstAttribute="width" secondItem="SqY-08-ICY" secondAttribute="width" multiplier="0.625" id="56a-uv-L9b"/>
+                            <constraint firstItem="Cfk-tS-5ai" firstAttribute="centerX" secondItem="SqY-08-ICY" secondAttribute="centerX" id="5Vr-kk-jjO"/>
+                            <constraint firstItem="tnd-2p-0BX" firstAttribute="height" secondItem="SqY-08-ICY" secondAttribute="height" multiplier="0.0528169" id="6ys-85-sgD"/>
+                            <constraint firstItem="cm2-JO-XdB" firstAttribute="trailing" secondItem="78q-sw-CN9" secondAttribute="trailing" constant="16" id="GXy-2A-L2d"/>
+                            <constraint firstItem="cm2-JO-XdB" firstAttribute="trailing" secondItem="Cfk-tS-5ai" secondAttribute="trailing" constant="114" id="Jr9-WO-Jli"/>
+                            <constraint firstItem="Hg0-2v-0RD" firstAttribute="top" secondItem="Cfk-tS-5ai" secondAttribute="bottom" constant="39" id="KDM-8f-8Ax"/>
+                            <constraint firstItem="78q-sw-CN9" firstAttribute="top" secondItem="Hg0-2v-0RD" secondAttribute="bottom" constant="26.5" id="LLG-fp-7h2"/>
+                            <constraint firstItem="pN5-RE-6Ge" firstAttribute="height" secondItem="SqY-08-ICY" secondAttribute="height" multiplier="0.0598592" id="Lnr-aM-otG"/>
+                            <constraint firstItem="pN5-RE-6Ge" firstAttribute="centerX" secondItem="SqY-08-ICY" secondAttribute="centerX" id="NCA-X5-dk1"/>
+                            <constraint firstItem="Cfk-tS-5ai" firstAttribute="leading" secondItem="cm2-JO-XdB" secondAttribute="leading" constant="114" id="VGz-bq-yef"/>
+                            <constraint firstItem="tnd-2p-0BX" firstAttribute="top" secondItem="pN5-RE-6Ge" secondAttribute="bottom" constant="8" id="YjA-14-yjq"/>
+                            <constraint firstItem="tnd-2p-0BX" firstAttribute="centerX" secondItem="pN5-RE-6Ge" secondAttribute="centerX" id="ZPE-aF-9dI"/>
+                            <constraint firstItem="78q-sw-CN9" firstAttribute="leading" secondItem="cm2-JO-XdB" secondAttribute="leading" constant="16" id="gdF-CX-LRm"/>
+                            <constraint firstItem="tnd-2p-0BX" firstAttribute="width" secondItem="SqY-08-ICY" secondAttribute="width" multiplier="0.35" id="m1g-4T-w8I"/>
+                            <constraint firstItem="Cfk-tS-5ai" firstAttribute="top" secondItem="cm2-JO-XdB" secondAttribute="top" constant="53" id="pWY-Sh-dKD"/>
+                            <constraint firstItem="pN5-RE-6Ge" firstAttribute="top" secondItem="78q-sw-CN9" secondAttribute="bottom" constant="35" id="ute-Ny-B9f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cm2-JO-XdB"/>
+                    </view>
+                    <connections>
+                        <outlet property="usernameInput" destination="pN5-RE-6Ge" id="q6J-Hb-RKD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3E-Ay-1tq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1378.125" y="-1029.9295774647887"/>
+        </scene>
+        <!--RootVC-->
         <scene sceneID="Q26-6X-CiH">
             <objects>
-                <viewController id="HPv-uR-kci" customClass="ViewController" customModule="Wordy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rootController" id="HPv-uR-kci" customClass="rootVC" customModule="Wordy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4DA-V2-e8j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -615,6 +685,9 @@
                         <viewLayoutGuide key="safeArea" id="rbY-mF-Fh0"/>
                     </view>
                     <navigationItem key="navigationItem" id="BkK-SK-tBj"/>
+                    <connections>
+                        <outlet property="usernameLabel" destination="qVJ-mF-Ovw" id="xLq-KV-7dS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CON-qd-EaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -800,6 +873,7 @@
     </scenes>
     <resources>
         <image name="450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg" width="450" height="600"/>
+        <image name="WordyLogo.png" width="60" height="60"/>
         <image name="book.fill" catalog="system" width="128" height="100"/>
         <image name="camera" catalog="system" width="128" height="96"/>
         <image name="livephoto" catalog="system" width="128" height="121"/>
