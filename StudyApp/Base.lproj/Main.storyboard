@@ -863,6 +863,7 @@
                     <navigationItem key="navigationItem" id="tNZ-eS-Fkn"/>
                     <connections>
                         <outlet property="CompleteLibrary" destination="Q6v-d8-NyC" id="rvL-io-1Bi"/>
+                        <outlet property="headlineLabel" destination="Msw-bG-CNn" id="1r0-lJ-pfE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7D-kI-o68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
