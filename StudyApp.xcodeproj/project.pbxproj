@@ -10,19 +10,23 @@
 		5F07BC7624606061003A286A /* Ne storyboard_Alena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F07BC7524606061003A286A /* Ne storyboard_Alena.storyboard */; };
 		5F07BC7824606152003A286A /* AddFromAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07BC7724606152003A286A /* AddFromAudio.swift */; };
 		5F0FDEFB245C008C00D2B3D7 /* BookPage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FDEFA245C008C00D2B3D7 /* BookPage.jpeg */; };
-		5F21499D245F44EB00B36F43 /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F21499C245F44EB00B36F43 /* unnamed.jpg */; };
 		5F2149A0245F5CA700B36F43 /* WordyLogo_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F21499E245F5CA700B36F43 /* WordyLogo_120x120.png */; };
 		5F2149A1245F5CA700B36F43 /* WordyLogo_180x190.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F21499F245F5CA700B36F43 /* WordyLogo_180x190.png */; };
+		5F2652C424935E5700088673 /* UserCreationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2652C324935E5700088673 /* UserCreationVC.swift */; };
 		5F32E64C245DC3D20008B42A /* bgpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F7D0CF6243A836100364709 /* bgpic.jpg */; };
 		5F32E650245DD1E90008B42A /* ScanFromCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32E64F245DD1E90008B42A /* ScanFromCamera.swift */; };
+		5F374AE2248CDB6A00E01E25 /* Red_Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F374AE1248CDB6A00E01E25 /* Red_Light.png */; };
 		5F5236B32440F9C900884B66 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5236B22440F9C900884B66 /* Buttons.swift */; };
 		5F564322246FDB9D0050205D /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F564321246FDB9D0050205D /* LibraryVC.swift */; };
 		5F56434824701A600050205D /* LibraryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F56434724701A600050205D /* LibraryCellTableViewCell.swift */; };
+		5F5EC743248D75B400D218C6 /* Green_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F5EC740248D75B400D218C6 /* Green_1.png */; };
+		5F5EC744248D75B400D218C6 /* Red_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F5EC741248D75B400D218C6 /* Red_1.png */; };
+		5F5EC745248D75B400D218C6 /* Yellow_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F5EC742248D75B400D218C6 /* Yellow_1.png */; };
 		5F7183F8246E58C1002C84F4 /* ManualAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7183F7246E58C1002C84F4 /* ManualAdd.swift */; };
 		5F72E8D22461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F72E8D12461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg */; };
 		5F7D0CBF243A7B6C00364709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7D0CBE243A7B6C00364709 /* AppDelegate.swift */; };
 		5F7D0CC1243A7B6C00364709 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7D0CC0243A7B6C00364709 /* SceneDelegate.swift */; };
-		5F7D0CC3243A7B6C00364709 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7D0CC2243A7B6C00364709 /* ViewController.swift */; };
+		5F7D0CC3243A7B6C00364709 /* rootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7D0CC2243A7B6C00364709 /* rootVC.swift */; };
 		5F7D0CC6243A7B6C00364709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7D0CC4243A7B6C00364709 /* Main.storyboard */; };
 		5F7D0CC8243A7B6D00364709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7D0CC7243A7B6D00364709 /* Assets.xcassets */; };
 		5F7D0CCB243A7B6D00364709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7D0CC9243A7B6D00364709 /* LaunchScreen.storyboard */; };
@@ -38,6 +42,8 @@
 		5FC38F11245C77DB00A03A21 /* AddWordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC38F10245C77DB00A03A21 /* AddWordController.swift */; };
 		5FF5F34C245E0ADF0010B05E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF5F34B245E0ADF0010B05E /* UserData.swift */; };
 		5FF5F34F245E12E50010B05E /* WordsLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FF5F34D245E12E50010B05E /* WordsLib.xcdatamodeld */; };
+		5FFE6003248C11C00081F8FF /* Green_Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFE6002248C11C00081F8FF /* Green_Light.png */; };
+		5FFE6005248C12300081F8FF /* Yellow_Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFE6004248C12300081F8FF /* Yellow_Light.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,19 +67,23 @@
 		5F07BC7524606061003A286A /* Ne storyboard_Alena.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Ne storyboard_Alena.storyboard"; sourceTree = "<group>"; };
 		5F07BC7724606152003A286A /* AddFromAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFromAudio.swift; sourceTree = "<group>"; };
 		5F0FDEFA245C008C00D2B3D7 /* BookPage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BookPage.jpeg; sourceTree = "<group>"; };
-		5F21499C245F44EB00B36F43 /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
 		5F21499E245F5CA700B36F43 /* WordyLogo_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WordyLogo_120x120.png; sourceTree = "<group>"; };
 		5F21499F245F5CA700B36F43 /* WordyLogo_180x190.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WordyLogo_180x190.png; sourceTree = "<group>"; };
+		5F2652C324935E5700088673 /* UserCreationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationVC.swift; sourceTree = "<group>"; };
 		5F32E64F245DD1E90008B42A /* ScanFromCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanFromCamera.swift; sourceTree = "<group>"; };
+		5F374AE1248CDB6A00E01E25 /* Red_Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red_Light.png; sourceTree = "<group>"; };
 		5F5236B22440F9C900884B66 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		5F564321246FDB9D0050205D /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
 		5F56434724701A600050205D /* LibraryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCellTableViewCell.swift; sourceTree = "<group>"; };
+		5F5EC740248D75B400D218C6 /* Green_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green_1.png; sourceTree = "<group>"; };
+		5F5EC741248D75B400D218C6 /* Red_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red_1.png; sourceTree = "<group>"; };
+		5F5EC742248D75B400D218C6 /* Yellow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow_1.png; sourceTree = "<group>"; };
 		5F7183F7246E58C1002C84F4 /* ManualAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAdd.swift; sourceTree = "<group>"; };
 		5F72E8D12461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg"; sourceTree = "<group>"; };
 		5F7D0CBB243A7B6C00364709 /* Wordy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7D0CBE243A7B6C00364709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7D0CC0243A7B6C00364709 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5F7D0CC2243A7B6C00364709 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		5F7D0CC2243A7B6C00364709 /* rootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = rootVC.swift; path = ../rootVC.swift; sourceTree = "<group>"; };
 		5F7D0CC5243A7B6C00364709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F7D0CC7243A7B6D00364709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F7D0CCA243A7B6D00364709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,6 +105,8 @@
 		5FC38F10245C77DB00A03A21 /* AddWordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordController.swift; sourceTree = "<group>"; };
 		5FF5F34B245E0ADF0010B05E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		5FF5F34E245E12E50010B05E /* WordsLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordsLib.xcdatamodel; sourceTree = "<group>"; };
+		5FFE6002248C11C00081F8FF /* Green_Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green_Light.png; sourceTree = "<group>"; };
+		5FFE6004248C12300081F8FF /* Yellow_Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow_Light.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +197,8 @@
 		5F7D0CEE243A7B8700364709 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5F7D0CC2243A7B6C00364709 /* ViewController.swift */,
+				5F7D0CC2243A7B6C00364709 /* rootVC.swift */,
+				5F2652C324935E5700088673 /* UserCreationVC.swift */,
 				5FA622722442389800124E6A /* FlashcardView.swift */,
 				5FC38F10245C77DB00A03A21 /* AddWordController.swift */,
 				5F32E64F245DD1E90008B42A /* ScanFromCamera.swift */,
@@ -220,10 +233,15 @@
 			children = (
 				5F72E8D12461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg */,
 				5F21499E245F5CA700B36F43 /* WordyLogo_120x120.png */,
+				5FFE6004248C12300081F8FF /* Yellow_Light.png */,
+				5FFE6002248C11C00081F8FF /* Green_Light.png */,
+				5F374AE1248CDB6A00E01E25 /* Red_Light.png */,
 				5F21499F245F5CA700B36F43 /* WordyLogo_180x190.png */,
-				5F21499C245F44EB00B36F43 /* unnamed.jpg */,
 				5F935337245EE1B9003B6151 /* WordyLogo.png */,
 				5F0FDEFA245C008C00D2B3D7 /* BookPage.jpeg */,
+				5F5EC740248D75B400D218C6 /* Green_1.png */,
+				5F5EC741248D75B400D218C6 /* Red_1.png */,
+				5F5EC742248D75B400D218C6 /* Yellow_1.png */,
 				5F7D0CF6243A836100364709 /* bgpic.jpg */,
 			);
 			path = images;
@@ -336,14 +354,19 @@
 				5F7D0CCB243A7B6D00364709 /* LaunchScreen.storyboard in Resources */,
 				5F0FDEFB245C008C00D2B3D7 /* BookPage.jpeg in Resources */,
 				5F7D0CC8243A7B6D00364709 /* Assets.xcassets in Resources */,
+				5F5EC745248D75B400D218C6 /* Yellow_1.png in Resources */,
 				5F2149A1245F5CA700B36F43 /* WordyLogo_180x190.png in Resources */,
+				5FFE6005248C12300081F8FF /* Yellow_Light.png in Resources */,
 				5F32E64C245DC3D20008B42A /* bgpic.jpg in Resources */,
 				5F72E8D22461DBEF001B0276 /* 450px-Jules_Verne_-_Journey_to_the_Center_of_the_Earth_(sample_book_page_in_Spanish).jpg in Resources */,
+				5F5EC744248D75B400D218C6 /* Red_1.png in Resources */,
 				5FA6227124422F4800124E6A /* RepeatCards.storyboard in Resources */,
 				5F935338245EE1B9003B6151 /* WordyLogo.png in Resources */,
+				5FFE6003248C11C00081F8FF /* Green_Light.png in Resources */,
 				5F2149A0245F5CA700B36F43 /* WordyLogo_120x120.png in Resources */,
+				5F5EC743248D75B400D218C6 /* Green_1.png in Resources */,
 				5F07BC7624606061003A286A /* Ne storyboard_Alena.storyboard in Resources */,
-				5F21499D245F44EB00B36F43 /* unnamed.jpg in Resources */,
+				5F374AE2248CDB6A00E01E25 /* Red_Light.png in Resources */,
 				5F7D0CC6243A7B6C00364709 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +394,7 @@
 			files = (
 				5F7D0CF2243A800700364709 /* TestView.swift in Sources */,
 				5FA622732442389800124E6A /* FlashcardView.swift in Sources */,
-				5F7D0CC3243A7B6C00364709 /* ViewController.swift in Sources */,
+				5F7D0CC3243A7B6C00364709 /* rootVC.swift in Sources */,
 				5F32E650245DD1E90008B42A /* ScanFromCamera.swift in Sources */,
 				5F07BC7824606152003A286A /* AddFromAudio.swift in Sources */,
 				5F56434824701A600050205D /* LibraryCellTableViewCell.swift in Sources */,
@@ -383,6 +406,7 @@
 				5F5236B32440F9C900884B66 /* Buttons.swift in Sources */,
 				5FF5F34F245E12E50010B05E /* WordsLib.xcdatamodeld in Sources */,
 				5FA622752442393800124E6A /* WordsCollection.swift in Sources */,
+				5F2652C424935E5700088673 /* UserCreationVC.swift in Sources */,
 				5F7D0CBF243A7B6C00364709 /* AppDelegate.swift in Sources */,
 				5FF5F34C245E0ADF0010B05E /* UserData.swift in Sources */,
 				5F7D0CC1243A7B6C00364709 /* SceneDelegate.swift in Sources */,
