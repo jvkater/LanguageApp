@@ -14,6 +14,7 @@ import CoreData
 class LibraryVC: UIViewController {
     @IBOutlet weak var CompleteLibrary: UITableView!
     
+    @IBOutlet weak var headlineLabel: UILabel!
     
     var WordsDataBase = [NSManagedObject]()
     
@@ -57,6 +58,8 @@ class LibraryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAll()
+        
+        headlineLabel.text = "You have added " + String(WordsDataBase.count) + " words"
         
         CompleteLibrary.register(UITableViewCell.self,
                            forCellReuseIdentifier: "Cell")
