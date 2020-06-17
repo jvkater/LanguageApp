@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Firebase
+
 
  class AddWordController: UIViewController {
     @IBAction func GetFromCameraPressed(_ sender: Any) {
         let refreshAlert = UIAlertController(title: "Note from developers", message: "Thank you for your interest in this functionality. We are now working tirelessly to implement this, and your interest is important for us.", preferredStyle: UIAlertController.Style.alert)
-
+        Analytics.logEvent("InterestedInCamera", parameters: nil)
         refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
           print("Handle Ok logic here")
           }))
@@ -20,7 +22,7 @@ import UIKit
     }
     @IBAction func GetFromAudioPressed(_ sender: Any) {
         let refreshAlert = UIAlertController(title: "Note from developers", message: "Thank you for your interest in this functionality. We are now working tirelessly to implement this, and your interest is important for us.", preferredStyle: UIAlertController.Style.alert)
-
+        Analytics.logEvent("InterestedInAudio", parameters: nil)
         refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
           print("Handle Ok logic here")
           }))

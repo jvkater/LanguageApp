@@ -9,7 +9,7 @@
 
 import UIKit
 import CoreData
-
+import Firebase
 
 class LibraryVC: UIViewController {
     @IBOutlet weak var CompleteLibrary: UITableView!
@@ -38,6 +38,7 @@ class LibraryVC: UIViewController {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
           return
         }
+        Analytics.logEvent("DeletedWord", parameters: nil)
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WordsLibrary")
               do {
@@ -58,7 +59,7 @@ class LibraryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAll()
-        
+        Analytics.logEvent("VisitedLibrary", parameters: nil)
         headlineLabel.text = "You have added " + String(WordsDataBase.count) + " words"
         
         CompleteLibrary.register(UITableViewCell.self,

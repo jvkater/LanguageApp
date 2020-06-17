@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 class FlashcardView: UIViewController {
     
@@ -20,7 +21,7 @@ class FlashcardView: UIViewController {
     
     @IBAction func CorrectPressed(_ sender: Any) {
         updateWordStats(word: ((WordsDataBase[NRound].value(forKey: "addedWord") as? String)!), updateType: "success")
-        
+        Analytics.logEvent("RememberedCorrectly", parameters: nil)
         if WordsDataBase.count > NRound+1 {
             NRound+=1 } else {
             NRound = 0
@@ -29,6 +30,7 @@ class FlashcardView: UIViewController {
     }
     
     @IBAction func IncorrectPressed(_ sender: Any) {
+        Analytics.logEvent("RememberedIncorrectly", parameters: nil)
         updateWordStats(word: ((WordsDataBase[NRound].value(forKey: "addedWord") as? String)!), updateType: "failure")
         if WordsDataBase.count > NRound+1 {
             NRound+=1 } else {
@@ -107,6 +109,7 @@ class FlashcardView: UIViewController {
         
         
     }
+    
     
     
     var initialState: UIView = {
@@ -197,6 +200,7 @@ class FlashcardView: UIViewController {
         fetchAll()
         WordsDataBase.shuffle()
         print(WordsDataBase.count)
+        Analytics.logEvent("StartedMemorizing", parameters: nil)
         
         if WordsDataBase.count > 20 {
             dbPreprocessing()

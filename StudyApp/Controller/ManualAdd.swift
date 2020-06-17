@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 class ManualAddVC: UIViewController, UITextFieldDelegate {
     
@@ -49,6 +50,7 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
              return
                }
+        Analytics.logEvent("AddedNewWord", parameters: nil)
            let managedContext = appDelegate.persistentContainer.viewContext
            let entity = NSEntityDescription.entity(forEntityName: "WordsLibrary", in: managedContext)!
            let WordCard = NSManagedObject(entity: entity, insertInto: managedContext)
