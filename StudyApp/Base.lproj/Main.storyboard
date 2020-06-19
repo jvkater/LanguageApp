@@ -144,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8P-19-yGT" customClass="MainMenuButton" customModule="Wordy" customModuleProvider="target">
-                                <rect key="frame" x="61" y="489" width="198" height="32"/>
+                                <rect key="frame" x="61" y="489" width="292" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Go back">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -161,7 +161,7 @@
                                     <constraint firstAttribute="height" constant="63.5" id="him-es-g2a"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iNM-cp-nqJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iNM-cp-nqJ">
                                 <rect key="frame" x="175" y="314" width="65" height="62"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -169,8 +169,8 @@
                                     <constraint firstAttribute="height" constant="64" id="ee3-qP-FQQ"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="waveform.path" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sGd-kn-cn8">
-                                <rect key="frame" x="288" y="315.5" width="219" height="62"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waveform.path" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sGd-kn-cn8">
+                                <rect key="frame" x="288" y="315.5" width="65" height="62"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Ma7-z4-Fgz"/>
@@ -178,24 +178,24 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add words using one of the options below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-7Z-tLG">
-                                <rect key="frame" x="47" y="237" width="227" height="21"/>
+                                <rect key="frame" x="47" y="237" width="321" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-Tn-SSz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-Tn-SSz">
                                 <rect key="frame" x="60" y="395" width="66" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.71013075039999995" green="0.70866196550000005" blue="0.73431797990000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77q-wc-MFt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77q-wc-MFt">
                                 <rect key="frame" x="300" y="395" width="40" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.71013075039999995" green="0.70866196550000005" blue="0.73431797990000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMd-R9-t74">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMd-R9-t74">
                                 <rect key="frame" x="180" y="395" width="54" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.71013075039999995" green="0.70866196550000005" blue="0.73431797990000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -354,14 +354,6 @@
             </objects>
             <point key="canvasLocation" x="-285" y="542.95774647887322"/>
         </scene>
-        <!--RepeatCards-->
-        <scene sceneID="3dp-dW-rW4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RepeatCards" id="RHD-um-4IL" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mQk-5f-7Ws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2179" y="-465"/>
-        </scene>
         <!--User CreationVC-->
         <scene sceneID="2om-y5-brG">
             <objects>
@@ -495,7 +487,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="RHD-um-4IL" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Vvt-c8-ZP4"/>
+                                            <action selector="MemorizationButtonPressed:" destination="HPv-uR-kci" eventType="touchUpInside" id="gV9-fo-gz7"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use flashcards to repeat the words you added" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDY-0F-xiX">
@@ -692,16 +684,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CON-qd-EaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1380" y="-296.83098591549299"/>
-        </scene>
-        <!--RepeatCards-->
-        <scene sceneID="KuG-Mo-iul">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="RepeatCards" storyboardName="RepeatCards" id="lc2-rq-SjS" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="eMP-Ix-tto"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Db-fl-yWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2434" y="-440"/>
         </scene>
         <!--Add Word Controller-->
         <scene sceneID="gVY-0o-fx9">
