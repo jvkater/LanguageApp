@@ -14,7 +14,8 @@ class UserCreationVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameInput: nameInputField!
     
     @IBAction func userInputFinished(_ sender: Any) {
-        save(username: usernameInput.text!)
+        let processed_username = (usernameInput.text?.trimmingCharacters(in: .whitespaces))!
+        save(username: processed_username)
         let resultController = storyboard!.instantiateViewController(withIdentifier: "rootController")
         resultController.modalPresentationStyle = .fullScreen
         resultController.modalTransitionStyle = .crossDissolve
