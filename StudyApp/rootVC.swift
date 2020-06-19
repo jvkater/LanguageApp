@@ -8,9 +8,41 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 class rootVC: UIViewController {
 
+    var tmpDB = [NSManagedObject]() // needed to check for amount of words
+    @IBAction func MemorizationButtonPressed(_ sender: Any) {
+        //gettin
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+      return
+    }
+    let managedContext = appDelegate.persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WordsLibrary")
+    do {
+      let words = try managedContext.fetch(fetchRequest)
+        for i in words {
+            tmpDB.append(i)
+        }
+        
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    
+        if tmpDB.count == 0 {
+            let refreshAlert = UIAlertController(title: "Your library is empty", message: "You have not added any new words yet. Please add one before you proceed", preferredStyle: UIAlertController.Style.alert)
+            Analytics.logEvent("AttemptedMemorizationWithEmptyLibrary", parameters: nil)
+            refreshAlert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(refreshAlert, animated: true, completion: nil)
+        } else {
+            let memorizationVC = FlashcardView()
+            memorizationVC.modalPresentationStyle = .fullScreen
+            memorizationVC.modalTransitionStyle = .crossDissolve
+            present(memorizationVC, animated: true, completion: nil)
+        }
+        
+    }
     @IBOutlet weak var usernameLabel: UILabel!
     
     func fetchUserData(){
@@ -36,7 +68,7 @@ class rootVC: UIViewController {
             usernameLabel.text = userinfo[0].value(forKey: "username") as? String
         }
       } catch  {
-        print("sthbsjbs")
+        print("Something went wrong")
       }
     }
     
