@@ -227,6 +227,7 @@ class FlashcardView: UIViewController {
         if (initialStateWord.text?.components(separatedBy: chararacterSet).filter{ !$0.isEmpty }.count)! > 1 {
             if initialStateWord.isTruncated {
                 initialStateWord.frame.size.height = 41
+                initialStateWord.minimumScaleFactor = 0.3
             } else {
                 initialStateWord.frame.size.height = 21
             }
