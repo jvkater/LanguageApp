@@ -36,12 +36,9 @@ class rootVC: UIViewController {
             refreshAlert.addAction(UIAlertAction(title: "OK", style: .default))
             present(refreshAlert, animated: true, completion: nil)
         } else {
-            let memorizationVC = FlashcardView()
-            memorizationVC.modalPresentationStyle = .fullScreen
-            memorizationVC.modalTransitionStyle = .crossDissolve
-            present(memorizationVC, animated: true, completion: nil)
-        }
+            performSegue(withIdentifier: "GoToMemorization", sender: self)
         
+        }
     }
     @IBOutlet weak var usernameLabel: UILabel!
     
