@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="UserInfo" representedClassName="UserInfo" syncable="YES" codeGenerationType="class">
         <attribute name="lastVisited" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="studiedToday" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <entity name="WordsLibrary" representedClassName="WordsLibrary" syncable="YES">
@@ -13,7 +14,7 @@
         <attribute name="unsuccessfullRecalls" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
+        <element name="UserInfo" positionX="-63" positionY="27" width="128" height="88"/>
         <element name="WordsLibrary" positionX="-63" positionY="-18" width="128" height="133"/>
-        <element name="UserInfo" positionX="-63" positionY="27" width="128" height="73"/>
     </elements>
 </model>
