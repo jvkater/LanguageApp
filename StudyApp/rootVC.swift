@@ -12,6 +12,8 @@ import Firebase
 
 class rootVC: UIViewController {
 
+    @IBOutlet weak var MemorizationButton: MainMenuButton!
+    
     var tmpDB = [NSManagedObject]() // needed to check for amount of words
     @IBAction func MemorizationButtonPressed(_ sender: Any) {
         //gettin
@@ -40,6 +42,8 @@ class rootVC: UIViewController {
         
         }
     }
+    
+    
     @IBOutlet weak var usernameLabel: UILabel!
     
     func fetchUserData(){
@@ -56,10 +60,6 @@ class rootVC: UIViewController {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             //show window
             appDelegate.window?.rootViewController = view
-            //let registrationVC = UserCreationVC()
-            //registrationVC.modalPresentationStyle = .fullScreen
-            //registrationVC.modalTransitionStyle = .crossDissolve
-            //present(registrationVC, animated: true, completion: nil)
         } else {
             print(userinfo[0].value(forKey: "username") as? String)
             usernameLabel.text = userinfo[0].value(forKey: "username") as? String
