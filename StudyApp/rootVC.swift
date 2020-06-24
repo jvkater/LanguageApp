@@ -14,7 +14,9 @@ class rootVC: UIViewController {
 
     @IBOutlet weak var MemorizationButton: MainMenuButton!
     
+    @IBOutlet weak var ProgressLabel: UILabel!
     var tmpDB = [NSManagedObject]() // needed to check for amount of words
+    
     @IBAction func MemorizationButtonPressed(_ sender: Any) {
         //gettin
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -54,6 +56,7 @@ class rootVC: UIViewController {
       let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UserInfo")
       do {
         let userinfo = try managedContext.fetch(fetchRequest)
+        // Check if user exists
         if userinfo.count == 0 {
             print("no users")
             let view = (storyboard?.instantiateViewController(withIdentifier: "registrationVC"))! as UIViewController
@@ -61,8 +64,22 @@ class rootVC: UIViewController {
             //show window
             appDelegate.window?.rootViewController = view
         } else {
-            print(userinfo[0].value(forKey: "username") as? String)
+            // If user exists -> Assign their name to label, update visit date and set repeated words to 0 if last visit != today
+            //print(userinfo[0].value(forKey: "username") as? String)
             usernameLabel.text = userinfo[0].value(forKey: "username") as? String
+            //param update sequence
+            let now = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MMM-dd"
+            let todayString = dateFormatter.string(from: now)
+            print(todayString)
+            if userinfo[0].value(forKey: "lastVisited") as? String != todayString {
+                userinfo[0].setValue(todayString, forKey: "lastVisited")
+                userinfo[0].setValue(0, forKey: "studiedToday")
+                try managedContext.save()
+            }
+            ProgressLabel.text = String(userinfo[0].value(forKey: "studiedToday") as! Int)
+            
         }
       } catch  {
         print("Something went wrong")
@@ -74,7 +91,19 @@ class rootVC: UIViewController {
         super.viewDidLoad()
         fetchUserData()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+               return
+             }
+             let managedContext = appDelegate.persistentContainer.viewContext
+             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UserInfo")
+             do {
+               let userinfo = try managedContext.fetch(fetchRequest)
+        ProgressLabel.text = String(userinfo[0].value(forKey: "studiedToday") as! Int)
+             } catch {
+                print("oops!")
+        }
+    }
     
     @IBAction func unwindFromSelection(unwindsegue:UIStoryboardSegue) {
     }
