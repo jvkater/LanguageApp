@@ -201,6 +201,8 @@ class FlashcardView: UIViewController {
         WordsDataBase.shuffle()
         print(WordsDataBase.count)
         Analytics.logEvent("StartedMemorizing", parameters: nil)
+        headlineLabel.isUserInteractionEnabled = false //because I found out too late that it's a button, not a label
+        
         
         if WordsDataBase.count > 20 {
             dbPreprocessing()
