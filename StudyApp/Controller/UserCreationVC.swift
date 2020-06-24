@@ -57,8 +57,9 @@ class UserCreationVC: UIViewController, UITextFieldDelegate {
         }
     let managedContext = appDelegate.persistentContainer.viewContext
     let entity = NSEntityDescription.entity(forEntityName: "UserInfo", in: managedContext)!
-    let WordCard = NSManagedObject(entity: entity, insertInto: managedContext)
-        WordCard.setValue(username, forKeyPath: "username")
+    let userInputInfo = NSManagedObject(entity: entity, insertInto: managedContext)
+        userInputInfo.setValue(username, forKeyPath: "username")
+        userInputInfo.setValue(0, forKey: "studiedToday")
         do {
             try managedContext.save()
         } catch _ as NSError {
