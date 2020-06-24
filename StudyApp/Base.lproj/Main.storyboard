@@ -690,6 +690,7 @@
                     <navigationItem key="navigationItem" id="BkK-SK-tBj"/>
                     <connections>
                         <outlet property="MemorizationButton" destination="pam-40-y8b" id="nmF-eO-r9Y"/>
+                        <outlet property="ProgressLabel" destination="XG6-Ws-U0c" id="vj7-1U-cGP"/>
                         <outlet property="usernameLabel" destination="qVJ-mF-Ovw" id="xLq-KV-7dS"/>
                         <segue destination="4w7-r8-eF0" kind="presentation" identifier="GoToMemorization" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tiD-xt-FWq"/>
                     </connections>
