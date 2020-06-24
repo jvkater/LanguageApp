@@ -12,7 +12,8 @@ import Firebase
 
 class FlashcardView: UIViewController {
     
-    var NRound = 0
+    var NRound = 0 // used to control that after 20th word the cycle repeats
+    var wordsRepeatedInSession = 0 //used to update stats about repeated words today
 
     @IBOutlet weak var headlineLabel: UIButton!
     @IBOutlet weak var BackButton: UIButton!
@@ -20,6 +21,7 @@ class FlashcardView: UIViewController {
     @IBOutlet weak var noButton: noButton!
     
     @IBAction func CorrectPressed(_ sender: Any) {
+        wordsRepeatedInSession += 1
         updateWordStats(word: ((WordsDataBase[NRound].value(forKey: "addedWord") as? String)!), updateType: "success")
         Analytics.logEvent("RememberedCorrectly", parameters: nil)
         if WordsDataBase.count > NRound+1 {
@@ -30,6 +32,7 @@ class FlashcardView: UIViewController {
     }
     
     @IBAction func IncorrectPressed(_ sender: Any) {
+        wordsRepeatedInSession += 1
         Analytics.logEvent("RememberedIncorrectly", parameters: nil)
         updateWordStats(word: ((WordsDataBase[NRound].value(forKey: "addedWord") as? String)!), updateType: "failure")
         if WordsDataBase.count > NRound+1 {
@@ -196,6 +199,7 @@ class FlashcardView: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         fetchAll()
         WordsDataBase.shuffle()
@@ -331,7 +335,25 @@ class FlashcardView: UIViewController {
             UIView.transition(from: backside, to: frontside, duration: 0.4, options: .transitionFlipFromRight, completion: nil)
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UserInfo")
+        do {
+          let usrData = try managedContext.fetch(fetchRequest)
+            // reporting that we've studied a certain amoint of words during current session
+            usrData[0].setValue(usrData[0].value(forKey: "studiedToday") as! Int + wordsRepeatedInSession, forKey: "studiedToday")
+            try managedContext.save()
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
 }
+
+
 
 extension UILabel {
     var isTruncated: Bool {
