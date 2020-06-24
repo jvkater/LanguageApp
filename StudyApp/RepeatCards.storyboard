@@ -27,7 +27,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmX-pe-q1b">
-                                        <rect key="frame" x="17" y="21" width="32" height="29"/>
+                                        <rect key="frame" x="17" y="20" width="32" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,7 +38,7 @@
                                     </button>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRQ-RN-Vgy">
                                         <rect key="frame" x="35" y="121" width="250" height="326"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </containerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-va-IPo" customClass="noButton" customModule="Wordy" customModuleProvider="target">
                                         <rect key="frame" x="35" y="476" width="110" height="45"/>
@@ -69,14 +69,12 @@
                                     <constraint firstItem="ZKX-Bs-7k3" firstAttribute="top" secondItem="Odi-jw-rFs" secondAttribute="top" constant="18" id="EMU-AT-7lp"/>
                                     <constraint firstItem="bRQ-RN-Vgy" firstAttribute="centerY" secondItem="Odi-jw-rFs" secondAttribute="centerY" id="HjZ-QV-94Q"/>
                                     <constraint firstItem="kQu-zV-6px" firstAttribute="trailing" secondItem="bRQ-RN-Vgy" secondAttribute="trailing" id="Itz-2P-o8c"/>
+                                    <constraint firstItem="jmX-pe-q1b" firstAttribute="centerY" secondItem="ZKX-Bs-7k3" secondAttribute="centerY" id="JLo-XD-RW3"/>
                                     <constraint firstItem="kQu-zV-6px" firstAttribute="height" secondItem="Odi-jw-rFs" secondAttribute="height" multiplier="0.0792254" id="Jn1-Br-gbx"/>
-                                    <constraint firstItem="bRQ-RN-Vgy" firstAttribute="leading" secondItem="Odi-jw-rFs" secondAttribute="leading" constant="35" id="Kvp-mk-Tfm"/>
                                     <constraint firstAttribute="bottom" secondItem="6eh-va-IPo" secondAttribute="bottom" constant="47" id="RaC-x8-f0r"/>
                                     <constraint firstItem="6eh-va-IPo" firstAttribute="leading" secondItem="bRQ-RN-Vgy" secondAttribute="leading" id="XGU-Vb-MY6"/>
                                     <constraint firstItem="ZKX-Bs-7k3" firstAttribute="centerX" secondItem="Odi-jw-rFs" secondAttribute="centerX" id="bI9-Cj-4Uu"/>
                                     <constraint firstItem="bRQ-RN-Vgy" firstAttribute="height" secondItem="Odi-jw-rFs" secondAttribute="height" multiplier="0.573944" id="cG9-EA-Ukq"/>
-                                    <constraint firstItem="jmX-pe-q1b" firstAttribute="top" secondItem="Odi-jw-rFs" secondAttribute="top" constant="21" id="gzP-0Z-yY2"/>
-                                    <constraint firstAttribute="trailing" secondItem="bRQ-RN-Vgy" secondAttribute="trailing" constant="35" id="jGq-Iv-N9r"/>
                                     <constraint firstItem="bRQ-RN-Vgy" firstAttribute="width" secondItem="Odi-jw-rFs" secondAttribute="width" multiplier="0.78125" id="mKC-QJ-hnp"/>
                                     <constraint firstItem="6eh-va-IPo" firstAttribute="height" secondItem="Odi-jw-rFs" secondAttribute="height" multiplier="0.0792254" id="ouj-DP-jDe"/>
                                     <constraint firstItem="bRQ-RN-Vgy" firstAttribute="top" secondItem="ZKX-Bs-7k3" secondAttribute="bottom" constant="70" id="vRf-kh-S3Z"/>
