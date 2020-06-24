@@ -30,7 +30,7 @@
                                 <rect key="frame" x="38" y="159.5" width="244" height="249"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRh-MN-tS9">
-                                        <rect key="frame" x="59" y="90.5" width="125" height="34"/>
+                                        <rect key="frame" x="59" y="80.5" width="125" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
@@ -48,7 +48,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Add new words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsO-WP-pC4">
-                                        <rect key="frame" x="59.5" y="42.5" width="125.5" height="20.5"/>
+                                        <rect key="frame" x="59.5" y="32.5" width="125.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -64,18 +64,18 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RiP-Ju-yxf">
-                                        <rect key="frame" x="59" y="152.5" width="125" height="34"/>
+                                        <rect key="frame" x="59" y="142.5" width="125" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXv-ch-coX">
-                                        <rect key="frame" x="93" y="133.5" width="58" height="14.5"/>
+                                        <rect key="frame" x="93" y="123.5" width="58" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-mL-zQ8">
-                                        <rect key="frame" x="107" y="70.5" width="30" height="14.5"/>
+                                        <rect key="frame" x="107" y="60.5" width="30" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                                     <constraint firstAttribute="trailing" secondItem="JRh-MN-tS9" secondAttribute="trailing" constant="60" id="Kzv-DY-c2t"/>
                                     <constraint firstItem="ceo-iD-99l" firstAttribute="height" secondItem="yVU-jO-TrY" secondAttribute="height" multiplier="0.164659" id="LwO-92-3kf"/>
                                     <constraint firstAttribute="trailing" secondItem="GhQ-ho-vyX" secondAttribute="trailing" id="MTB-ob-yHX"/>
-                                    <constraint firstAttribute="centerY" secondItem="JRh-MN-tS9" secondAttribute="bottom" id="Nip-gI-yCC"/>
+                                    <constraint firstAttribute="centerY" secondItem="JRh-MN-tS9" secondAttribute="bottom" constant="10" id="Nip-gI-yCC"/>
                                     <constraint firstAttribute="bottom" secondItem="ceo-iD-99l" secondAttribute="bottom" id="Nxa-Fx-dVX"/>
                                     <constraint firstItem="kcM-mL-zQ8" firstAttribute="top" secondItem="dsO-WP-pC4" secondAttribute="bottom" constant="7.5" id="Qng-j2-CxQ"/>
                                     <constraint firstItem="RiP-Ju-yxf" firstAttribute="width" secondItem="JRh-MN-tS9" secondAttribute="width" id="UKB-fC-mf1"/>
@@ -127,6 +127,7 @@
                         <outlet property="MainView" destination="yVU-jO-TrY" id="5ip-8v-skn"/>
                         <outlet property="TranslationInput" destination="RiP-Ju-yxf" id="VNd-yJ-etq"/>
                         <outlet property="WordInput" destination="JRh-MN-tS9" id="Ikz-SD-JCy"/>
+                        <outlet property="backgroundView" destination="2cP-Rt-ZCf" id="DnK-L3-Xj4"/>
                         <outlet property="testLabel" destination="kcM-mL-zQ8" id="iGw-ZJ-Dns"/>
                     </connections>
                 </viewController>
@@ -445,8 +446,8 @@
                             <view contentMode="scaleAspectFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-k6-kLl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVJ-mF-Ovw">
-                                        <rect key="frame" x="131.5" y="71.5" width="57.5" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVJ-mF-Ovw">
+                                        <rect key="frame" x="136" y="71.5" width="48.5" height="27"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -498,7 +499,6 @@
                                         </state>
                                         <connections>
                                             <action selector="MemorizationButtonPressed:" destination="HPv-uR-kci" eventType="touchUpInside" id="gV9-fo-gz7"/>
-                                            <segue destination="4w7-r8-eF0" kind="presentation" identifier="GoToMemorization" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="AmK-6I-8wu"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use flashcards to repeat the words you added" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDY-0F-xiX">
@@ -689,7 +689,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="BkK-SK-tBj"/>
                     <connections>
+                        <outlet property="MemorizationButton" destination="pam-40-y8b" id="nmF-eO-r9Y"/>
                         <outlet property="usernameLabel" destination="qVJ-mF-Ovw" id="xLq-KV-7dS"/>
+                        <segue destination="4w7-r8-eF0" kind="presentation" identifier="GoToMemorization" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tiD-xt-FWq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CON-qd-EaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -807,14 +809,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5N-ga-RS9">
-                                        <rect key="frame" x="119.5" y="17.5" width="81" height="33"/>
+                                        <rect key="frame" x="119.5" y="27.5" width="81" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="My Library">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxM-4r-I5e">
-                                        <rect key="frame" x="17" y="19" width="34" height="30"/>
+                                        <rect key="frame" x="17" y="29" width="34" height="30"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -825,10 +827,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.57500153779999996" green="0.67817640300000004" blue="0.39994674920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="PxM-4r-I5e" firstAttribute="centerY" secondItem="d1J-QA-ToK" secondAttribute="centerY" id="DI3-rq-YVj"/>
+                                    <constraint firstItem="PxM-4r-I5e" firstAttribute="centerY" secondItem="d1J-QA-ToK" secondAttribute="centerY" constant="10" id="DI3-rq-YVj"/>
                                     <constraint firstItem="w5N-ga-RS9" firstAttribute="centerX" secondItem="d1J-QA-ToK" secondAttribute="centerX" id="Db3-co-cX3"/>
                                     <constraint firstItem="PxM-4r-I5e" firstAttribute="leading" secondItem="d1J-QA-ToK" secondAttribute="leading" constant="17" id="MDw-Y2-E19"/>
-                                    <constraint firstItem="w5N-ga-RS9" firstAttribute="centerY" secondItem="d1J-QA-ToK" secondAttribute="centerY" id="PNq-dk-2A4"/>
+                                    <constraint firstItem="w5N-ga-RS9" firstAttribute="centerY" secondItem="d1J-QA-ToK" secondAttribute="centerY" constant="10" id="PNq-dk-2A4"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The words I know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msw-bG-CNn">
