@@ -19,6 +19,8 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var AddButton: UIButton!
     @IBOutlet weak var DismissButton: UIButton!
     
+    @IBOutlet var backgroundView: UIView!
+    
     @IBOutlet weak var testLabel: UILabel!
     @IBAction func WordAdded(_ sender: Any) {
     }
@@ -99,7 +101,6 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(backdropView)
         
         AddButton.layer.cornerRadius = 10
         AddButton.layer.maskedCorners = [.layerMaxXMaxYCorner]
@@ -120,7 +121,7 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
         self.TranslationInput.delegate = self
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ManualAddVC.handleTap(_:)))
-        backdropView.addGestureRecognizer(tapGesture)
+        backgroundView.addGestureRecognizer(tapGesture)
         
     }
     
