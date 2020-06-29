@@ -26,8 +26,8 @@ class ManualAddVC: UIViewController, UITextFieldDelegate {
     }
     @IBAction func AddWordToLib(_ sender: Any) {
         save(originalWord: String(WordInput.text ?? "null"), translatedWord: String(TranslationInput.text ?? "null"))
-        WordInput.text = " "
-        TranslationInput.text = " "
+        WordInput.text = ""
+        TranslationInput.text = ""
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {        self.view.endEditing(true)
