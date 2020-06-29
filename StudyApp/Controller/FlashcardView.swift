@@ -350,9 +350,10 @@ class FlashcardView: UIViewController {
         } catch let error as NSError {
           print("Could not fetch. \(error), \(error.userInfo)")
         }
+        
     }
+   
 }
-
 
 
 extension UILabel {
