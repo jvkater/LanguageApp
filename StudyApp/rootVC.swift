@@ -15,6 +15,8 @@ class rootVC: UIViewController {
     @IBOutlet weak var MemorizationButton: MainMenuButton!
     
     @IBOutlet weak var ProgressLabel: UILabel!
+    var progressLabelDefaultState = 0
+    
     var tmpDB = [NSManagedObject]() // needed to check for amount of words
     
     @IBAction func MemorizationButtonPressed(_ sender: Any) {
@@ -59,10 +61,7 @@ class rootVC: UIViewController {
         // Check if user exists
         if userinfo.count == 0 {
             print("no users")
-            let view = (storyboard?.instantiateViewController(withIdentifier: "registrationVC"))! as UIViewController
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            //show window
-            appDelegate.window?.rootViewController = view
+            performSegue(withIdentifier: "registrationSegue", sender: self)
         } else {
             // If user exists -> Assign their name to label, update visit date and set repeated words to 0 if last visit != today
             //print(userinfo[0].value(forKey: "username") as? String)
@@ -89,21 +88,13 @@ class rootVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //fetchUserData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         fetchUserData()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-               return
-             }
-             let managedContext = appDelegate.persistentContainer.viewContext
-             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UserInfo")
-             do {
-               let userinfo = try managedContext.fetch(fetchRequest)
-        ProgressLabel.text = String(userinfo[0].value(forKey: "studiedToday") as! Int)
-             } catch {
-                print("oops!")
-        }
-    }
+    
     
     @IBAction func unwindFromSelection(unwindsegue:UIStoryboardSegue) {
     }
