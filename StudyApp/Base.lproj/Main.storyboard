@@ -693,6 +693,7 @@
                         <outlet property="ProgressLabel" destination="XG6-Ws-U0c" id="vj7-1U-cGP"/>
                         <outlet property="usernameLabel" destination="qVJ-mF-Ovw" id="xLq-KV-7dS"/>
                         <segue destination="4w7-r8-eF0" kind="presentation" identifier="GoToMemorization" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tiD-xt-FWq"/>
+                        <segue destination="iUb-RD-xT4" kind="presentation" identifier="registrationSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="cfE-X9-4DC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CON-qd-EaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
