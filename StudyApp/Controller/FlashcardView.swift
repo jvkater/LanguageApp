@@ -96,12 +96,16 @@ class FlashcardView: UIViewController {
             }
             
             // updating clusterization
-            if  successRate <= 0.5 {
-                item[0].setValue("Bad", forKey: "recallCluster")
-            } else if successRate <= 0.8 {
-                item[0].setValue("Decent", forKey: "recallCluster")
-            } else {
-                item[0].setValue("Good", forKey: "recallCluster")
+            
+            if totalRecalls > 5 {
+                if  successRate <= 0.5 {
+                    item[0].setValue("Bad", forKey: "recallCluster")
+                } else if successRate <= 0.8 {
+                    item[0].setValue("Decent", forKey: "recallCluster")
+                } else {
+                    item[0].setValue("Good", forKey: "recallCluster")
+                }
+                
             }
             
             try managedContext.save()
